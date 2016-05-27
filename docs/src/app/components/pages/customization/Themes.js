@@ -8,8 +8,18 @@ import typography from 'material-ui/styles/typography';
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import themesText from './themes.md';
 import ClearFix from 'material-ui/internal/ClearFix';
+import CommunicationChatBubble from 'material-ui/svg-icons/communication/chat-bubble';
+import CodeExample from '../../CodeExample';
+import alignText from './align.md';
+import Avatar from 'material-ui/Avatar';
+import {List, ListItem} from 'material-ui/List';
+import Subheader from 'material-ui/Subheader';
+import Divider from 'material-ui/Divider';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import {cyan500} from 'material-ui/styles/colors';
 
 import {
+  AppBar,
   Checkbox,
   DatePicker,
   Dialog,
@@ -29,6 +39,95 @@ import {
   TextField,
   Toggle,
 } from 'material-ui';
+
+var stl = "ltr";
+const codeWithoutAux =
+    '<List dir="rtl"  style={{overflow: \'auto\', maxHeight: 200}}>\n' +
+    '  <Subheader>Recent chats</Subheader>\n' +
+    '  <ListItem\n' +
+    '    primaryText="Brendan Lim"\n' +
+    '    leftAvatar={<Avatar src="images/ok-128.jpg" />}\n' +
+    '    rightIcon={<CommunicationChatBubble />} />\n' +
+    '  <ListItem\n' +
+    '    primaryText="Eric Hoffman"\n' +
+    '    leftAvatar={<Avatar src="images/kolage-128.jpg" />}\n' +
+    '    rightIcon={<CommunicationChatBubble />} />\n' +
+    '  <ListItem\n' +
+    '    primaryText="Grace Ng"\n' +
+    '    leftAvatar={<Avatar src="images/uxceo-128.jpg" />}\n' +
+    '    rightIcon={<CommunicationChatBubble />} />\n' +
+    '  <ListItem\n' +
+    '    primaryText="Kerem Suer"\n' +
+    '    leftAvatar={<Avatar src="images/kerem-128.jpg" />}\n' +
+    '    rightIcon={<CommunicationChatBubble />} />\n' +
+    '  <ListItem\n' +
+    '    primaryText="Raquel Parrado"\n' +
+    '    leftAvatar={<Avatar src="images/raquelromanp-128.jpg" />}\n' +
+    '    rightIcon={<CommunicationChatBubble />} />\n' +
+    '</List>\n' +
+    '<Divider />\n' +
+    '<List dir="rtl"  style={{overflow: \'auto\', maxHeight: 200}}>\n' +
+    '  <Subheader>Previous chats</Subheader>\n' +
+    '  <ListItem\n' +
+    '    primaryText="Chelsea Otakan"\n' +
+    '    leftAvatar={<Avatar src="images/chexee-128.jpg" />} />\n' +
+    '  <ListItem\n' +
+    '    primaryText="James Anderson"\n' +
+    '    leftAvatar={<Avatar src="images/jsa-128.jpg" />} />\n' +
+    '</List>\n';
+
+const codeWithAux =
+    '<List  style={{overflow: \'auto\', maxHeight: 200}}>\n' +
+    '  <div> dir="rtl"\n' +
+    '  <Subheader>Recent chats</Subheader>\n' +
+    '  <ListItem\n' +
+    '    primaryText="Brendan Lim"\n' +
+    '    leftAvatar={<Avatar src="images/ok-128.jpg" />}\n' +
+    '    rightIcon={<CommunicationChatBubble />} />\n' +
+    '  <ListItem\n' +
+    '    primaryText="Eric Hoffman"\n' +
+    '    leftAvatar={<Avatar src="images/kolage-128.jpg" />}\n' +
+    '    rightIcon={<CommunicationChatBubble />} />\n' +
+    '  <ListItem\n' +
+    '    primaryText="Grace Ng"\n' +
+    '    leftAvatar={<Avatar src="images/uxceo-128.jpg" />}\n' +
+    '    rightIcon={<CommunicationChatBubble />} />\n' +
+    '  <ListItem\n' +
+    '    primaryText="Kerem Suer"\n' +
+    '    leftAvatar={<Avatar src="images/kerem-128.jpg" />}\n' +
+    '    rightIcon={<CommunicationChatBubble />} />\n' +
+    '  <ListItem\n' +
+    '    primaryText="Raquel Parrado"\n' +
+    '    leftAvatar={<Avatar src="images/raquelromanp-128.jpg" />}\n' +
+    '    rightIcon={<CommunicationChatBubble />} />\n' +
+    '</List>\n' +
+    '<Divider />\n' +
+    '<List  style={{overflow: \'auto\', maxHeight: 200}}>\n' +
+    '  <div dir="rtl">\n' +
+    '  <Subheader>Previous chats</Subheader>\n' +
+    '  <ListItem\n' +
+    '    primaryText="Chelsea Otakan"\n' +
+    '    leftAvatar={<Avatar src="images/chexee-128.jpg" />} />\n' +
+    '  <ListItem\n' +
+    '    primaryText="James Anderson"\n' +
+    '    leftAvatar={<Avatar src="images/jsa-128.jpg" />} />\n' +
+    '  </div>\n' +
+    '</List>\n';
+const codeCheckbox =
+      '<Checkbox \n' +
+      '  id="checkboxIdX"\n' +
+      '  name="checkboxName1"\n' +
+      '  value="checkboxValue1"\n' +
+      '  label="Material-UI is awesome!"\n' +
+      '  iconStyle={{\n' +
+      '    fill: \'#FF4081\'\n' +
+      '  }} />\n\n' +
+      '/**Excerpt for cboxMuiTheme**/\n' + 
+      'const cboxMuiTheme = getMuiTheme({isRtl:true});\n\n' +
+      '/**Excerpt from CSS**/\n' + 
+      '#checkboxIdX {\n' +
+      '  direction: rtl;\n' +
+      '}';
 
 const markdownText = `
 ## Themes
@@ -112,6 +211,31 @@ class ThemesPage extends Component {
         borderBottom: `1px solid ${borderColor}`,
         paddingBottom: '10px',
       },
+      headline: {
+        fontSize: 24,
+        lineHeight: '32px',
+        paddingTop: 16,
+        marginBottom: 12,
+        letterSpacing: 0,
+        fontWeight: typography.fontWeightNormal,
+        color: typography.textDarkBlack,
+      },
+      dir1: {
+        fontFamily: "Consolas",
+        color: "#808080",
+      },
+      container: {
+        marginTop: 10,
+      },
+      base: {
+        border: "1px solid #E5E5E5",
+        padding: 20,
+        boxShadow: "2px 2px 1px #ECECEC",
+      },
+      muiOverride: { 
+        border: "1px solid #FFFFFF",
+        backgroundColor: "#FFFFFF",
+      },
     };
 
     if (this.props.width === MEDIUM) {
@@ -122,6 +246,209 @@ class ThemesPage extends Component {
     styles.groupSlider = Object.assign({}, styles.group, styles.groupSlider);
 
     return styles;
+  }
+
+  getAlignmentGroup() {
+    const cboxMuiTheme = getMuiTheme({isRtl:true});
+    const styles = this.getStyles();
+
+    return (
+      <div>
+        <br/>
+            <h2 style={styles.headline}>Alignment (RTL)</h2>
+            <p>The default alignment of all Material-UI elements is LTR. The following methods can be used to allow RTL scripting.
+              <br/>References:
+            </p>
+          <ul> 
+            <li><a href="https://github.com/callemall/material-ui/issues/1926">Material UI Issue #1926</a></li>
+            <li><a href="http://www.w3schools.com/tags/att_global_dir.asp">w3schools - Global <span style={styles.dir1}>dir</span> attribute</a></li>
+            <li><a href="https://www.w3.org/International/questions/qa-html-dir">w3 - RTL scripting</a></li>
+          </ul>
+            <Tabs
+              value={this.state.valueTabs}
+                onChange ={this.handleChangeTabs2}
+            >
+              <Tab
+                label="Left-To-Right ALIGNMENT (DEFAULT)"
+                value="ltr" />
+              <Tab
+                label="Right-To-Left ALIGNMENT"
+                value="rtl" />
+            </Tabs>
+            <ClearFix style={styles.base} dir={stl}> <h3 style={styles.title}>Hello World!</h3>
+            <div style={styles.container}>
+              <div >
+                <FloatingActionButton iconClassName="muidocs-icon-action-grade" disabled={true} />
+              </div>
+              <div >
+                <RaisedButton label="Button :)" primary={true} />
+              </div>
+            </div>
+            <div >
+              <div style={styles.container}>
+                <Checkbox
+                  name="checkboxName1"
+                  value="checkboxValue1"
+                  label="checkbox" />
+              </div>
+              <div style={styles.container}>
+                <RadioButtonGroup
+                  name="shipSpeed"
+                  defaultSelected="usd"
+                >
+                  <RadioButton
+                    value="rb"
+                    label="RadioButton" />
+                  <RadioButton
+                    value="arb"
+                    label="Another RadioButton" />
+                  <RadioButton
+                    value="yarb"
+                    label="Yet Another RadioButton" />
+                </RadioButtonGroup>
+              </div>
+              <div style={styles.container}>
+                <Toggle
+                  name="toggleName1"
+                  label="toggle" />
+                <Toggle
+                  name="toggleName2"
+                  label="toggled toggle"
+                  defaultToggled={true}/>
+              </div>
+            </div>
+            <div style={Object.assign({}, styles.group, {marginTop: 0})}>
+              <div style={styles.container}>
+                <TextField
+                  style={styles.textfield}
+                  hintText="TextField"
+                />
+              </div>
+              <div style={styles.container}>
+                <DatePicker
+                  hintText="Landscape Dialog"
+                  mode="landscape"
+                  style={{width: '100%'}}
+                />
+              </div>
+              <div style={styles.container}>
+                <DropDownMenu value={3} style={{width: '100%'}}>
+                  <MenuItem value={1} primaryText={'Ice Cream Sandwich'} />
+                  <MenuItem value={2} primaryText={'Jelly Bean'} />
+                  <MenuItem value={3} primaryText={'KitKat'} />
+                  <MenuItem value={4} primaryText={'Lollipop'} />
+                  <MenuItem value={5} primaryText={'Marshmallow'} />
+                </DropDownMenu>
+              </div>
+            </div>
+            <div style={styles.groupSlider}>
+              <Slider style={styles.slider} name="slider2" defaultValue={0.2} />
+            </div>
+          </ClearFix>
+          <br/>
+          <div>
+            <MarkdownElement text={alignText} />
+          </div>
+          <h3 style={styles.title}>Maintaining Directionality</h3>
+          <div>When rendering in RTL some browsers change the directionality of the interface rather than just the alignment of text components. This includes the position of scrolling bars etc. This may not be desirable. The following can be done to safeguard against this issue. 
+          </div>
+          <br/>
+          <h4>Right-To-Left Alignment - With misaligned scroll-bar</h4>
+          <CodeExample code={codeWithoutAux} component={false} >
+            <List style={{overflow: 'auto', maxHeight: 260}} dir="rtl">
+              <Subheader>Recent chats</Subheader>
+              <ListItem
+                primaryText="Brendan Lim"
+                leftAvatar={<Avatar src="images/ok-128.jpg" />}
+                rightIcon={<CommunicationChatBubble />} />
+              <ListItem
+                primaryText="Eric Hoffman"
+                leftAvatar={<Avatar src="images/kolage-128.jpg" />}
+                rightIcon={<CommunicationChatBubble />} />
+              <ListItem
+                primaryText="Grace Ng"
+                leftAvatar={<Avatar src="images/uxceo-128.jpg" />}
+                rightIcon={<CommunicationChatBubble />} />
+              <ListItem
+                primaryText="Kerem Suer"
+                leftAvatar={<Avatar src="images/kerem-128.jpg" />}
+                rightIcon={<CommunicationChatBubble />} />
+              <ListItem
+                primaryText="Raquel Parrado"
+                leftAvatar={<Avatar src="images/raquelromanp-128.jpg" />}
+                rightIcon={<CommunicationChatBubble />} />
+            </List>
+            <Divider />
+            <List  style={{overflow: 'auto', maxHeight: 200}} dir="rtl">
+              <Subheader>Previous chats</Subheader>
+              <ListItem
+                primaryText="Chelsea Otakan"
+                leftAvatar={<Avatar src="images/chexee-128.jpg" />} />
+              <ListItem
+                primaryText="James Anderson"
+                leftAvatar={<Avatar src="images/jsa-128.jpg" />} />
+            </List>
+            </CodeExample>
+            <br/>
+          <h4>Right-To-Left Alignment - With auxiliary <span style={styles.dir1}>&#60;div&#62;</span></h4>
+          <div>Rather than setting alignment values for each sub-component an additional component can be used that contains this attribute as follows:</div>
+          <CodeExample code={codeWithAux} component={false} >
+            <List style={{overflow: 'auto', maxHeight: 260}}>
+              <div dir="rtl">
+                <Subheader>Recent chats</Subheader>
+                <ListItem
+                  primaryText="Brendan Lim"
+                  leftAvatar={<Avatar src="images/ok-128.jpg" />}
+                  rightIcon={<CommunicationChatBubble />} />
+                <ListItem
+                  primaryText="Eric Hoffman"
+                  leftAvatar={<Avatar src="images/kolage-128.jpg" />}
+                  rightIcon={<CommunicationChatBubble />} />
+                <ListItem
+                  primaryText="Grace Ng"
+                  leftAvatar={<Avatar src="images/uxceo-128.jpg" />}
+                  rightIcon={<CommunicationChatBubble />} />
+                <ListItem
+                  primaryText="Kerem Suer"
+                  leftAvatar={<Avatar src="images/kerem-128.jpg" />}
+                  rightIcon={<CommunicationChatBubble />} />
+                <ListItem
+                  primaryText="Raquel Parrado"
+                  leftAvatar={<Avatar src="images/raquelromanp-128.jpg" />}
+                  rightIcon={<CommunicationChatBubble />} />
+             </div>
+            </List>
+            <Divider />
+            <List  style={{overflow: 'auto', maxHeight: 200}}>
+              <div dir="rtl">
+                <Subheader>Previous chats</Subheader>
+                <ListItem
+                  primaryText="Chelsea Otakan"
+                  leftAvatar={<Avatar src="images/chexee-128.jpg" />} />
+                <ListItem
+                  primaryText="James Anderson"
+                  leftAvatar={<Avatar src="images/jsa-128.jpg" />} />
+            </div>
+            </List>
+            </CodeExample>
+            <h3 style={styles.title}>True RTL support in Material-UI - <span style={styles.dir1}>isRtl</span> key (JS <span style={styles.dir1}>muiTheme</span> Object)</h3>
+            <div>As mentioned above the isRtl key is the React Native way to set the alignment of React components</div>
+            <CodeExample code={codeCheckbox} component={false}>
+              <MuiThemeProvider muiTheme={cboxMuiTheme}>
+                <Checkbox 
+                  style={styles.muiOverride}
+                  id="checkboxIdX"
+                  name="checkboxName1"
+                  value="checkboxValue1"
+                  label="Material-UI is awesome!"
+                  className="muidocs-checkbox-example"
+                  iconStyle={{
+                    fill: '#FF4081'
+                  }} />
+              </MuiThemeProvider>
+            </CodeExample>
+          </div>
+        );
   }
 
   getComponentGroup() {
@@ -228,17 +555,15 @@ class ThemesPage extends Component {
                   label="Cancel"
                   keyboardFocus={true}
                   onTouchTap={this.handleRequestCloseDialog}
-                  primary={true}
-                />,
+                  primary={true} />,
                 <FlatButton
                   label="Submit"
                   onTouchTap={this.handleRequestCloseDialog}
-                  primary={true}
-                />,
+                  primary={true} />,
               ]}
               onRequestClose={this.handleRequestCloseDialog}
             >
-              The actions in this window are created from tan array of element's that&#39;s passed in.
+              The actions in this window are created from tan array of element&#39;s that&#39;s passed in.
             </Dialog>
           </div>
         </div>
@@ -246,8 +571,7 @@ class ThemesPage extends Component {
           <div style={styles.containerCentered}>
             <FlatButton
               onTouchTap={this.handleTouchTapDrawer}
-              label="View Drawer"
-            />
+              label="View Drawer" />
             <Drawer
               open={this.state.drawerOpen} docked={false}
               onRequestChange={this.handleRequestChangeDrawer}
@@ -261,16 +585,14 @@ class ThemesPage extends Component {
           <div style={styles.containerCentered}>
             <FlatButton
               onTouchTap={this.handleTouchTapSnackbar}
-              label="View Snackbar"
-            />
+              label="View Snackbar" />
           </div>
           <Snackbar
             open={this.state.snackbarOpen}
             onRequestClose={this.handleRequestCloseSnackbar}
             message="This is a snackbar"
             action="Got It!"
-            onActionTouchTap={this.handleRequestCloseSnackbar}
-          />
+            onActionTouchTap={this.handleRequestCloseSnackbar} />
         </div>
       </ClearFix>
     );
@@ -294,6 +616,21 @@ class ThemesPage extends Component {
     this.props.onChangeMuiTheme(newMuiTheme);
   };
 
+  handleChangeTabs2 = (valueTabs) => {
+      let newMuiTheme = null;
+
+      if (valueTabs === 'ltr') {
+        stl = "ltr";
+      } 
+      else {
+        stl = "rtl";
+      }
+
+      this.setState({
+        valueTabs: valueTabs,
+      });
+    };
+
   getThemeExamples() {
     return (
       <div>
@@ -303,12 +640,10 @@ class ThemesPage extends Component {
         >
           <Tab
             label="Light Theme (Default)"
-            value="light"
-          />
+            value="light" />
           <Tab
             label="Dark Theme"
-            value="dark"
-          />
+            value="dark" />
         </Tabs>
         {this.getComponentGroup()}
       </div>
@@ -362,8 +697,9 @@ class ThemesPage extends Component {
           <ClearFix style={styles.liveExampleBlock}>{this.getThemeExamples()}</ClearFix>
         </Paper>
         <div style={styles.bottomBorderWrapper}>
-          <MarkdownElement text={themesText} />
+          <MarkdownElement id="md" text={themesText} />
         </div>
+        {this.getAlignmentGroup()}
       </div>
     );
   }

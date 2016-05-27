@@ -151,8 +151,7 @@ class AppNavDrawer extends Component {
               <ListItem primaryText="Usage" value="/get-started/usage" />,
               <ListItem primaryText="Server Rendering" value="/get-started/server-rendering" />,
               <ListItem primaryText="Examples" value="/get-started/examples" />,
-            ]}
-          />
+            ]} />
           <ListItem
             primaryText="Customization"
             primaryTogglesNestedList={true}
@@ -160,8 +159,7 @@ class AppNavDrawer extends Component {
               <ListItem primaryText="Themes" value="/customization/themes" />,
               <ListItem primaryText="Inline Styles" value="/customization/inline-styles" />,
               <ListItem primaryText="Colors" value="/customization/colors" />,
-            ]}
-          />
+            ]} />
           <ListItem
             primaryText="Components"
             primaryTogglesNestedList={true}
@@ -178,8 +176,7 @@ class AppNavDrawer extends Component {
                   <ListItem primaryText="Raised Button" value="/components/raised-button" />,
                   <ListItem primaryText="Floating Action Button" value="/components/floating-action-button" />,
                   <ListItem primaryText="Icon Button" value="/components/icon-button" />,
-                ]}
-              />,
+                ]} />,
               <ListItem primaryText="Card" value="/components/card" />,
               <ListItem primaryText="Chip" value="/components/chip" />,
               <ListItem primaryText="Date Picker" value="/components/date-picker" />,
@@ -193,8 +190,7 @@ class AppNavDrawer extends Component {
                 nestedItems={[
                   <ListItem primaryText="Font Icon" value="/components/font-icon" />,
                   <ListItem primaryText="SVG Icon" value="/components/svg-icon" />,
-                ]}
-              />,
+                ]} />,
               <ListItem primaryText="List" value="/components/list" />,
               <ListItem
                 primaryText="Menus"
@@ -203,8 +199,7 @@ class AppNavDrawer extends Component {
                   <ListItem primaryText="Menu" value="/components/menu" />,
                   <ListItem primaryText="Icon Menu" value="/components/icon-menu" />,
                   <ListItem primaryText="Drop Down Menu" value="/components/dropdown-menu" />,
-                ]}
-              />,
+                ]} />,
               <ListItem primaryText="Paper" value="/components/paper" />,
               <ListItem primaryText="Popover" value="/components/popover" />,
               <ListItem
@@ -214,8 +209,7 @@ class AppNavDrawer extends Component {
                   <ListItem primaryText="Circular Progress" value="/components/circular-progress" />,
                   <ListItem primaryText="Linear Progress" value="/components/linear-progress" />,
                   <ListItem primaryText="Refresh Indicator" value="/components/refresh-indicator" />,
-                ]}
-              />,
+                ]} />,
               <ListItem primaryText="Select Field" value="/components/select-field" />,
               <ListItem primaryText="Slider" value="/components/slider" />,
               <ListItem
@@ -225,8 +219,7 @@ class AppNavDrawer extends Component {
                   <ListItem primaryText="Checkbox" value="/components/checkbox" />,
                   <ListItem primaryText="Radio Button" value="/components/radio-button" />,
                   <ListItem primaryText="Toggle" value="/components/toggle" />,
-                ]}
-              />,
+                ]} />,
               <ListItem primaryText="Snackbar" value="/components/snackbar" />,
               <ListItem primaryText="Stepper" value="/components/stepper" />,
               <ListItem primaryText="Subheader" value="/components/subheader" />,
