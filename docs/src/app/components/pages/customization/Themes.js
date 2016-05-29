@@ -249,7 +249,7 @@ class ThemesPage extends Component {
   }
 
   getAlignmentGroup() {
-    const cboxMuiTheme = getMuiTheme({isRtl:true});
+    const cboxMuiTheme = getMuiTheme({isRtl: true});
     const styles = this.getStyles();
 
     return (
@@ -321,8 +321,7 @@ class ThemesPage extends Component {
               <div style={styles.container}>
                 <TextField
                   style={styles.textfield}
-                  hintText="TextField"
-                />
+                  hintText="TextField" />
               </div>
               <div style={styles.container}>
                 <DatePicker
@@ -475,14 +474,12 @@ class ThemesPage extends Component {
             <Checkbox
               name="checkboxName1"
               value="checkboxValue1"
-              label="checkbox"
-            />
+              label="checkbox" />
             <Checkbox
               name="checkboxName2"
               value="checkboxValue2"
               label="disabled checkbox"
-              disabled={true}
-            />
+              disabled={true} />
           </div>
           <div style={styles.container}>
             <RadioButtonGroup
@@ -491,45 +488,38 @@ class ThemesPage extends Component {
             >
               <RadioButton
                 value="usd"
-                label="USD"
-              />
+                label="USD" />
               <RadioButton
                 value="euro"
-                label="Euro"
-              />
+                label="Euro" />
               <RadioButton
                 value="mxn"
                 label="MXN"
-                disabled={true}
-              />
+                disabled={true} />
             </RadioButtonGroup>
           </div>
           <div style={styles.container}>
             <Toggle
               name="toggleName1"
-              label="toggle"
-            />
+              label="toggle" />
             <Toggle
               name="toggleName2"
               label="disabled toggle"
               defaultToggled={true}
-              disabled={true}
-            />
+              disabled={true} />
           </div>
         </div>
         <div style={Object.assign({}, styles.group, {marginTop: 0})}>
           <div style={styles.container}>
             <TextField
               style={styles.textfield}
-              hintText="TextField"
-            />
+              hintText="TextField" />
           </div>
           <div style={styles.container}>
             <DatePicker
               hintText="Landscape Dialog"
               mode="landscape"
-              style={{width: '100%'}}
-            />
+              style={{width: '100%'}} />
           </div>
           <div style={styles.container}>
             <DropDownMenu value={3} style={{width: '100%'}}>
@@ -621,9 +611,11 @@ class ThemesPage extends Component {
 
       if (valueTabs === 'ltr') {
         stl = "ltr";
+        document.querySelector("body").style.direction = "ltr";
       } 
       else {
         stl = "rtl";
+        document.querySelector("body").style.direction = "rtl";
       }
 
       this.setState({
