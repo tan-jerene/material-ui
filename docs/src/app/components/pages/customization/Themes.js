@@ -16,7 +16,7 @@ import {List, ListItem} from 'material-ui/List';
 import Subheader from 'material-ui/Subheader';
 import Divider from 'material-ui/Divider';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import {cyan500} from 'material-ui/styles/colors';
+import {cyan500, red500} from 'material-ui/styles/colors';
 
 import {
   AppBar,
@@ -224,6 +224,14 @@ class ThemesPage extends Component {
         fontFamily: "Consolas",
         color: "#808080",
       },
+      dir2: {
+        fontFamily: "Consolas",
+        color: "#565656",
+      },
+      dir3: {
+        fontFamily: "Consolas",
+        color: "#C1C1C1",
+      },
       container: {
         marginTop: 10,
       },
@@ -249,7 +257,7 @@ class ThemesPage extends Component {
   }
 
   getAlignmentGroup() {
-    const cboxMuiTheme = getMuiTheme({isRtl: true});
+    const cboxMuiTheme = getMuiTheme({isRtl: true,});
     const styles = this.getStyles();
 
     return (
@@ -588,13 +596,30 @@ class ThemesPage extends Component {
     );
   }
 
+  getComponentGroup2() {
+    const styles = this.getStyles();
+
+    return (
+      <ClearFix>
+      </ClearFix>
+    );
+  }
+
   handleChangeTabs = (valueTabs) => {
     let newMuiTheme = null;
 
     if (valueTabs === 'light') {
       newMuiTheme = getMuiTheme();
-    } else {
+    } 
+    else if (valueTabs === 'dark') {
       newMuiTheme = getMuiTheme(darkBaseTheme);
+    }
+    else {
+      newMuiTheme = getMuiTheme({
+        palette: {
+          primary1Color: red500,
+        },
+      });
     }
 
     newMuiTheme.name = valueTabs;
@@ -604,23 +629,61 @@ class ThemesPage extends Component {
     });
 
     this.props.onChangeMuiTheme(newMuiTheme);
+    console.log(newMuiTheme);
+  };
+/*******************************************************************OVER HERE***************************************************************/
+  handleCustomThemes () {
+    let newMuiTheme = null;
+    newMuiTheme = getMuiTheme({
+      palette: {
+        primary1Color: cyan500,
+        primary2Color: cyan700,
+        primary3Color: grey400,
+        accent1Color: pinkA200,
+        accent2Color: grey100,
+        accent3Color: grey500,
+        textColor: darkBlack,
+        alternateTextColor: white,
+        canvasColor: white,
+        borderColor: grey300,
+        disabledColor: fade(darkBlack, 0.3),
+        pickerHeaderColor: cyan500,
+        clockCircleColor: fade(darkBlack, 0.07),
+        shadowColor: fullBlack,
+      },
+    });
+
+    newMuiTheme.name = "custom";
+
+    this.props.onChangeMuiTheme(newMuiTheme);
+    console.log(newMuiTheme);
   };
 
   handleChangeTabs2 = (valueTabs) => {
       let newMuiTheme = null;
 
       if (valueTabs === 'ltr') {
-        stl = "ltr";
-        document.querySelector("body").style.direction = "ltr";
+        //stl = "ltr";
+        //document.querySelector("body").style.direction = "rtl";
+        newMuiTheme = getMuiTheme({
+          isRtl: false,
+        });
       } 
       else {
-        stl = "rtl";
-        document.querySelector("body").style.direction = "rtl";
+        //stl = "rtl";
+        //document.querySelector("body").style.direction = "rtl";
+        newMuiTheme = getMuiTheme({
+          isRtl: true,
+        });
       }
+
+      newMuiTheme.name = valueTabs;
 
       this.setState({
         valueTabs: valueTabs,
       });
+
+      this.props.onChangeMuiTheme(newMuiTheme);
     };
 
   getThemeExamples() {
@@ -636,6 +699,9 @@ class ThemesPage extends Component {
           <Tab
             label="Dark Theme"
             value="dark" />
+          <Tab
+            label="Custom Theme"
+            value="custom" />
         </Tabs>
         {this.getComponentGroup()}
       </div>
@@ -688,6 +754,33 @@ class ThemesPage extends Component {
         <Paper style={styles.liveExamplePaper}>
           <ClearFix style={styles.liveExampleBlock}>{this.getThemeExamples()}</ClearFix>
         </Paper>
+        <h2 style={styles.title}>Customized Themes</h2>
+        <div>The <span style={styles.dir1}>getMuiTheme</span> function of Material-UI allows the user to customize the theme. This can be done by changing the <span style={styles.dir1}>palette</span> which accordingly change all components with a given styling and/or changing individual components. The following will demonstrate the usage of the <span style={styles.dir1}>palette</span> key. Test it out!</div>
+        <div style={styles.bottomBorderWrapper}>
+          <div style={styles.dir2}>
+            getMuiTheme&#40;&#123; <br/>
+            &nbsp; palette: &#123; <br/>
+            &nbsp;&nbsp; primary1Color: <TextField hintStyle={styles.dir3} defaultValue="#00BCD4" hintText="#XXXXXX" id="prim1Col"></TextField>, <br/>
+            &nbsp;&nbsp; primary2Color: <TextField hintStyle={styles.dir3} defaultValue="#0097A7" hintText="#XXXXXX" id="prim2Col"></TextField>, <br/>
+            &nbsp;&nbsp; primary3Color: <TextField hintStyle={styles.dir3} defaultValue="#BDBDBD" hintText="#XXXXXX" id="prim3Col"></TextField>, <br/>
+            &nbsp;&nbsp; accent1Color: <TextField hintStyle={styles.dir3} defaultValue="#FF4081" hintText="#XXXXXX" id="acc1Col"></TextField>, <br/>
+            &nbsp;&nbsp; accent2Color: <TextField hintStyle={styles.dir3} defaultValue="#F5F5F5" hintText="#XXXXXX" id="acc2Col"></TextField>, <br/>
+            &nbsp;&nbsp; accent3Color: <TextField hintStyle={styles.dir3} defaultValue="#9E9E9E" hintText="#XXXXXX" id="acc3Col"></TextField>, <br/>
+            &nbsp;&nbsp; textColor: <TextField hintStyle={styles.dir3} defaultValue="rgba(0, 0, 0, 0.87)" hintText="#XXXXXX" id="txtCol"></TextField>, <br/>
+            &nbsp;&nbsp; alternateTextColor: <TextField hintStyle={styles.dir3} defaultValue="rgba(255, 255, 255, 1)" hintText="#XXXXXX" id="altTxtCol"></TextField>, <br/>
+            &nbsp;&nbsp; canvasColor: <TextField hintStyle={styles.dir3} defaultValue="rgba(255, 255, 255, 1)" hintText="#XXXXXX" id="canvCol"></TextField>, <br/>
+            &nbsp;&nbsp; borderColor: <TextField hintStyle={styles.dir3} defaultValue="#e0e0e0" hintText="#XXXXXX" id="borCol"></TextField>, <br/>
+            &nbsp;&nbsp; disabledColor: <TextField hintStyle={styles.dir3} defaultValue="fade(darkBlack, 0.3)" hintText="#XXXXXX" id="disCol"></TextField>, <br/>
+            &nbsp;&nbsp; pickerHeaderColor: <TextField hintStyle={styles.dir3} defaultValue="#00BCD4" hintText="#XXXXXX" id="pickCol"></TextField>, <br/>
+            &nbsp;&nbsp; clockCircleColor: <TextField hintStyle={styles.dir3} defaultValue="fade(darkBlack, 0.07)" hintText="#XXXXXX" id="clkCircCol"></TextField>, <br/>
+            &nbsp;&nbsp; shadowColor: <TextField hintStyle={styles.dir3} defaultValue="rgba(0, 0, 0, 1)" hintText="#XXXXXX" id="shadCol"></TextField>, <br/>
+            &nbsp;&#125;, <br/>
+            &#125;&#41; <br/>
+            <div style={styles.containerCentered}>
+              <RaisedButton label="Preview!" primary={true} onMouseDown={this.handleCustomThemes()}/>
+            </div>
+          </div>
+        </div>
         <div style={styles.bottomBorderWrapper}>
           <MarkdownElement id="md" text={themesText} />
         </div>
