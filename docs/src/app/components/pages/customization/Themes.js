@@ -636,7 +636,9 @@ class ThemesPage extends Component {
 /*******************************************************************OVER HERE***************************************************************/
   handleCustomThemes = () => {
     let newMuiTheme = null;
-    prm1col = document.getElementById("prim1Col").value;
+    if(document.getElementById("prim1Col").value != ""){
+      prm1col = document.getElementById("prim1Col").value;
+    }
     console.log(prm1col);
     //console.log(document.getElementById("prim1Col").value);
     newMuiTheme = getMuiTheme({
