@@ -635,6 +635,7 @@ class ThemesPage extends Component {
   handleCustomThemes () {
     let newMuiTheme = null;
     //console.log(document.getElementById("prim1Col").value);
+    console.log("Why ya in here?!?!?");
     newMuiTheme = getMuiTheme({
       palette: {
         primary1Color: "#000000",//document.getElementById("prim1Col").value,
@@ -778,7 +779,7 @@ class ThemesPage extends Component {
             &nbsp;&#125;, <br/>
             &#125;&#41; <br/>
             <div style={styles.containerCentered}>
-              <RaisedButton label="Preview!" primary={true} onMouseDown={this.handleCustomThemes()}/>
+              <RaisedButton label="Preview!" primary={true} /*onMouseDown={this.handleCustomThemes()}*//>
             </div>
           </div>
         </div>
