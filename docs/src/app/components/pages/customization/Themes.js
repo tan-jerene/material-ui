@@ -761,7 +761,7 @@ class ThemesPage extends Component {
           <div style={styles.dir2}>
             getMuiTheme&#40;&#123; <br/>
             &nbsp; palette: &#123; <br/>
-            &nbsp;&nbsp; primary1Color: <TextField hintStyle={styles.dir3} /*defaultValue="#00BCD4"*/ hintText="#XXXXXX" id="prim1Col"></TextField>, <br/>
+            &nbsp;&nbsp; primary1Color: <TextField hintStyle={styles.dir3} hintText="#XXXXXX" defaultValue="#00BCD4" id="prim1Col"></TextField>, <br/>
             &nbsp;&nbsp; primary2Color: <TextField hintStyle={styles.dir3} /*defaultValue="#0097A7"*/ hintText="#XXXXXX" id="prim2Col"></TextField>, <br/>
             &nbsp;&nbsp; primary3Color: <TextField hintStyle={styles.dir3} /*defaultValue="#BDBDBD"*/ hintText="#XXXXXX" id="prim3Col"></TextField>, <br/>
             &nbsp;&nbsp; accent1Color: <TextField hintStyle={styles.dir3} /*defaultValue="#FF4081"*/ hintText="#XXXXXX" id="acc1Col"></TextField>, <br/>
