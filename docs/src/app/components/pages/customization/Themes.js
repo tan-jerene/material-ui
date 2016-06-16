@@ -635,10 +635,9 @@ class ThemesPage extends Component {
   handleCustomThemes = () => {
     let newMuiTheme = null;
     //console.log(document.getElementById("prim1Col").value);
-    console.log("Why ya in here?!?!?");
     newMuiTheme = getMuiTheme({
       palette: {
-        primary1Color: "#000000",//document.getElementById("prim1Col").value,
+        primary1Color: document.getElementById("prim1Col").value,
         //primary2Color: document.getElementById("prim2Col").value,
         //primary3Color: document.getElementById("prim3Col").value,
         //accent1Color: document.getElementById("acc1Col").value,
