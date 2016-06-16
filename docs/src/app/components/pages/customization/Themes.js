@@ -637,6 +637,7 @@ class ThemesPage extends Component {
   handleCustomThemes = () => {
     let newMuiTheme = null;
     prm1col = document.getElementById("prim1Col").value;
+    console.log(prm1col);
     //console.log(document.getElementById("prim1Col").value);
     newMuiTheme = getMuiTheme({
       palette: {
