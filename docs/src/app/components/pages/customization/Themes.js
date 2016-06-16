@@ -632,7 +632,7 @@ class ThemesPage extends Component {
     console.log(newMuiTheme);
   };
 /*******************************************************************OVER HERE***************************************************************/
-  handleCustomThemes () {
+  handleCustomThemes = () => {
     let newMuiTheme = null;
     //console.log(document.getElementById("prim1Col").value);
     console.log("Why ya in here?!?!?");
