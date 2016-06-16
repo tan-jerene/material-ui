@@ -779,7 +779,7 @@ class ThemesPage extends Component {
             &nbsp;&#125;, <br/>
             &#125;&#41; <br/>
             <div style={styles.containerCentered}>
-              <RaisedButton label="Preview!" primary={true} onClick={this.handleCustomThemes()}/>
+              <RaisedButton label="Preview!" primary={true} onClick={this.handleCustomThemes}/>
             </div>
           </div>
         </div>
