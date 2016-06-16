@@ -40,6 +40,8 @@ import {
   Toggle,
 } from 'material-ui';
 
+var prm1col = "#00BCD4";
+
 var stl = "ltr";
 const codeWithoutAux =
     '<List dir="rtl"  style={{overflow: \'auto\', maxHeight: 200}}>\n' +
@@ -634,10 +636,11 @@ class ThemesPage extends Component {
 /*******************************************************************OVER HERE***************************************************************/
   handleCustomThemes = () => {
     let newMuiTheme = null;
+    prm1col = document.getElementById("prim1Col").value;
     //console.log(document.getElementById("prim1Col").value);
     newMuiTheme = getMuiTheme({
       palette: {
-        primary1Color: document.getElementById("prim1Col").value,
+        primary1Color: prm1col,
         //primary2Color: document.getElementById("prim2Col").value,
         //primary3Color: document.getElementById("prim3Col").value,
         //accent1Color: document.getElementById("acc1Col").value,
@@ -761,7 +764,7 @@ class ThemesPage extends Component {
           <div style={styles.dir2}>
             getMuiTheme&#40;&#123; <br/>
             &nbsp; palette: &#123; <br/>
-            &nbsp;&nbsp; primary1Color: <TextField hintStyle={styles.dir3} hintText="#XXXXXX" defaultValue="#00BCD4" id="prim1Col"></TextField>, <br/>
+            &nbsp;&nbsp; primary1Color: <TextField hintStyle={styles.dir3} hintText="#XXXXXX" /*defaultValue="#00BCD4"*/ id="prim1Col"></TextField>, <br/>
             &nbsp;&nbsp; primary2Color: <TextField hintStyle={styles.dir3} /*defaultValue="#0097A7"*/ hintText="#XXXXXX" id="prim2Col"></TextField>, <br/>
             &nbsp;&nbsp; primary3Color: <TextField hintStyle={styles.dir3} /*defaultValue="#BDBDBD"*/ hintText="#XXXXXX" id="prim3Col"></TextField>, <br/>
             &nbsp;&nbsp; accent1Color: <TextField hintStyle={styles.dir3} /*defaultValue="#FF4081"*/ hintText="#XXXXXX" id="acc1Col"></TextField>, <br/>
