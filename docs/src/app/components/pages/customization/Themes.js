@@ -634,7 +634,7 @@ class ThemesPage extends Component {
 /*******************************************************************OVER HERE***************************************************************/
   handleCustomThemes () {
     let newMuiTheme = null;
-    console.log(document.getElementById("prim1Col").value);
+    //console.log(document.getElementById("prim1Col").value);
     newMuiTheme = getMuiTheme({
       palette: {
         primary1Color: "#000000",//document.getElementById("prim1Col").value,
