@@ -691,6 +691,7 @@ class ThemesPage extends Component {
     if(document.getElementById("shadCol").value){
       sdCol = document.getElementById("shadCol").value;
     }
+
     console.log(prm1col);
     //console.log(document.getElementById("prim1Col").value);
     newMuiTheme = getMuiTheme({
@@ -702,13 +703,13 @@ class ThemesPage extends Component {
         accent2Color: acc2col,
         accent3Color: acc3col,
         textColor: txtcol,
-        alternateTextColor: ,
-        canvasColor: ,
-        borderColor: ,
-        disabledColor: ,
-        pickerHeaderColor: ,
-        clockCircleColor: ,
-        shadowColor: ,
+        alternateTextColor: alttxtcol,
+        canvasColor: canvcol,
+        borderColor: barcol,
+        disabledColor: discol,
+        pickerHeaderColor: pkCol,
+        clockCircleColor: ckCrCol,
+        shadowColor: sdCol,
       },
     });
 
