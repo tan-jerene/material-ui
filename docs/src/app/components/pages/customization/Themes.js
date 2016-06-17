@@ -44,8 +44,8 @@ var prm1col = "#00BCD4";
 var prm2col = "#0097A7";
 var prm3col = "#BDBDBD";
 var acc1col = "#FF4081";
-var acc2col = "#F5F5F5";/*
-var acc3col = "#9E9E9E";
+var acc2col = "#F5F5F5";
+var acc3col = "#9E9E9E";/*
 var txtcol = rgba(0, 0, 0, 0.87);
 var alttxtcol = "#FFFFFF";
 var canvcol = "#FFFFFF";
@@ -679,13 +679,13 @@ class ThemesPage extends Component {
     else{
       var acc2col = "#F5F5F5";
     }
-    /*
     if(document.getElementById("acc3Col").value != ""){
       acc3col = document.getElementById("acc3Col").value
     }
     else{
       var acc3col = "#9E9E9E";
     }
+    /*
     if(document.getElementById("txtCol").value != ""){
       txtcol = document.getElementById("txtCol").value;
     }
@@ -745,8 +745,8 @@ class ThemesPage extends Component {
         primary3Color: prm3col,
         accent1Color: acc1col,
         accent2Color: acc2col,
-        /*accent3Color: acc3col,
-        textColor: txtcol,
+        accent3Color: acc3col,
+        /*textColor: txtcol,
         alternateTextColor: alttxtcol,
         canvasColor: canvcol,
         borderColor: barcol,
