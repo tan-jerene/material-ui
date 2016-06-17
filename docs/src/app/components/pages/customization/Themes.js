@@ -40,7 +40,7 @@ import {
   Toggle,
 } from 'material-ui';
 
-var prm1col = "#00BCD4";
+var prm1col = "#00BCD4";/*
 var prm2col = "#0097A7";
 var prm3col = "#BDBDBD";
 var acc1col = "#FF4081";
@@ -53,7 +53,7 @@ var borcol = "#e0e0e0";
 var discol = fade(rgba(0, 0, 0, 0.87), 0.3);
 var pkCol = "#00BCD4";
 var ckCrCol = fade(rgba(0, 0, 0, 0.87), 0.07);
-var sdCol = rgba(0, 0, 0, 1);
+var sdCol = rgba(0, 0, 0, 1);*/
 
 var stl = "ltr";
 const codeWithoutAux =
@@ -652,6 +652,7 @@ class ThemesPage extends Component {
     if(document.getElementById("prim1Col").value != ""){
       prm1col = document.getElementById("prim1Col").value;
     }
+    /*
     if(document.getElementById("prim2Col").value != ""){
       prm2col = document.getElementById("prim2Col").value;
     }
@@ -691,13 +692,14 @@ class ThemesPage extends Component {
     if(document.getElementById("shadCol").value != ""){
       sdCol = document.getElementById("shadCol").value;
     }
+    */
 
     console.log(prm1col);
     //console.log(document.getElementById("prim1Col").value);
     newMuiTheme = getMuiTheme({
       palette: {
         primary1Color: prm1col,
-        primary2Color: prm2col,
+        /*primary2Color: prm2col,
         primary3Color: prm3col,
         accent1Color: acc1col,
         accent2Color: acc2col,
@@ -709,7 +711,7 @@ class ThemesPage extends Component {
         disabledColor: discol,
         pickerHeaderColor: pkCol,
         clockCircleColor: ckCrCol,
-        shadowColor: sdCol,
+        shadowColor: sdCol,*/
       },
     });
 
