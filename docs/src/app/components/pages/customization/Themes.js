@@ -41,8 +41,8 @@ import {
 } from 'material-ui';
 
 var prm1col = "#00BCD4";
-var prm2col = "#0097A7";/*
-var prm3col = "#BDBDBD";
+var prm2col = "#0097A7";
+var prm3col = "#BDBDBD";/*
 var acc1col = "#FF4081";
 var acc2col = "#F5F5F5";
 var acc3col = "#9E9E9E";
@@ -661,13 +661,13 @@ class ThemesPage extends Component {
     else{
       var prm2col = "#0097A7";
     }
-    /*
     if(document.getElementById("prim3Col").value != ""){
       prm3col = document.getElementById("prim3Col").value;
     }
     else{
       var prm3col = "#BDBDBD";
     }
+    /*
     if(document.getElementById("acc1Col").value != ""){
       acc1col = document.getElementById("acc1Col").value;
     }
