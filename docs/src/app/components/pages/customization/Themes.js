@@ -673,22 +673,22 @@ class ThemesPage extends Component {
     if(document.getElementById("altTxtCol").value != ""){
       alttxtcol = document.getElementById("altTxtCol").value;
     }
-    if(document.getElementById("canvCol").value){
+    if(document.getElementById("canvCol").value != ""){
       canvcol = document.getElementById("canvCol").value;
     }
-    if(document.getElementById("borCol").value){
+    if(document.getElementById("borCol").value != ""){
       borcol = document.getElementById("borCol").value;
     }
-    if(document.getElementById("disCol").value){
+    if(document.getElementById("disCol").value != ""){
       discol = document.getElementById("disCol").value;
     }
-    if(document.getElementById("pickCol").value){
+    if(document.getElementById("pickCol").value != ""){
       pkCol = document.getElementById("pickCol").value;
     }
-    if(document.getElementById("clkCircCol").value){
+    if(document.getElementById("clkCircCol").value != ""){
       ckCrCol = document.getElementById("clkCircCol").value;
     }
-    if(document.getElementById("shadCol").value){
+    if(document.getElementById("shadCol").value != ""){
       sdCol = document.getElementById("shadCol").value;
     }
 
