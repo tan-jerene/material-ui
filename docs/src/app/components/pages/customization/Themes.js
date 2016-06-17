@@ -41,6 +41,19 @@ import {
 } from 'material-ui';
 
 var prm1col = "#00BCD4";
+var prm2col = "#0097A7";
+var prm3col = "#BDBDBD";
+var acc1col = "#FF4081";
+var acc2col = "#F5F5F5";
+var acc3col = "#9E9E9E";
+var txtcol = rgba(0, 0, 0, 0.87);
+var alttxtcol = "#FFFFFF";
+var canvcol = "#FFFFFF";
+var borcol = "#e0e0e0";
+var discol = fade(rgba(0, 0, 0, 0.87), 0.3);
+var pkCol = "#00BCD4";
+var ckCrCol = fade(rgba(0, 0, 0, 0.87), 0.07);
+var sdCol = rgba(0, 0, 0, 1);
 
 var stl = "ltr";
 const codeWithoutAux =
@@ -639,24 +652,63 @@ class ThemesPage extends Component {
     if(document.getElementById("prim1Col").value != ""){
       prm1col = document.getElementById("prim1Col").value;
     }
+    if(document.getElementById("prim2Col").value != ""){
+      prm2col = document.getElementById("prim2Col").value;
+    }
+    if(document.getElementById("prim3Col").value != ""){
+      prm3col = document.getElementById("prim3Col").value;
+    }
+    if(document.getElementById("acc1Col").value != ""){
+      acc1col = document.getElementById("acc1Col").value;
+    }
+    if(document.getElementById("acc2Col").value != ""){
+      acc2col = document.getElementById("acc2Col").value;
+    }
+    if(document.getElementById("acc3Col").value != ""){
+      acc3col = document.getElementById("acc3Col").value
+    }
+    if(document.getElementById("txtCol").value != ""){
+      txtcol = document.getElementById("txtCol").value;
+    }
+    if(document.getElementById("altTxtCol").value != ""){
+      alttxtcol = document.getElementById("altTxtCol").value;
+    }
+    if(document.getElementById("canvCol").value){
+      canvcol = document.getElementById("canvCol").value;
+    }
+    if(document.getElementById("borCol").value){
+      borcol = document.getElementById("borCol").value;
+    }
+    if(document.getElementById("disCol").value){
+      discol = document.getElementById("disCol").value;
+    }
+    if(document.getElementById("pickCol").value){
+      pkCol = document.getElementById("pickCol").value;
+    }
+    if(document.getElementById("clkCircCol").value){
+      ckCrCol = document.getElementById("clkCircCol").value;
+    }
+    if(document.getElementById("shadCol").value){
+      sdCol = document.getElementById("shadCol").value;
+    }
     console.log(prm1col);
     //console.log(document.getElementById("prim1Col").value);
     newMuiTheme = getMuiTheme({
       palette: {
         primary1Color: prm1col,
-        //primary2Color: document.getElementById("prim2Col").value,
-        //primary3Color: document.getElementById("prim3Col").value,
-        //accent1Color: document.getElementById("acc1Col").value,
-        //accent2Color: document.getElementById("acc2Col").value,
-        //accent3Color: document.getElementById("acc3Col").value,
-        //textColor: document.getElementById("txtCol").value,
-        //alternateTextColor: document.getElementById("altTxtCol").value,
-        //canvasColor: document.getElementById("canvCol").value,
-        //borderColor: document.getElementById("borCol").value,
-        //disabledColor: document.getElementById("disCol").value,
-        //pickerHeaderColor: document.getElementById("pickCol").value,
-        //clockCircleColor: document.getElementById("clkCircCol").value,
-        //shadowColor: document.getElementById("shadCol").value,
+        primary2Color: prm2col,
+        primary3Color: prm3col,
+        accent1Color: acc1col,
+        accent2Color: acc2col,
+        accent3Color: acc3col,
+        textColor: txtcol,
+        alternateTextColor: ,
+        canvasColor: ,
+        borderColor: ,
+        disabledColor: ,
+        pickerHeaderColor: ,
+        clockCircleColor: ,
+        shadowColor: ,
       },
     });
 
@@ -767,7 +819,7 @@ class ThemesPage extends Component {
           <div style={styles.dir2}>
             getMuiTheme&#40;&#123; <br/>
             &nbsp; palette: &#123; <br/>
-            &nbsp;&nbsp; primary1Color: <TextField hintStyle={styles.dir3} hintText="#XXXXXX" /*defaultValue="#00BCD4"*/ id="prim1Col"></TextField>, <br/>
+            &nbsp;&nbsp; primary1Color: <TextField hintStyle={styles.dir3} /*defaultValue="#00BCD4"*/ hintText="#XXXXXX" id="prim1Col"></TextField>, <br/>
             &nbsp;&nbsp; primary2Color: <TextField hintStyle={styles.dir3} /*defaultValue="#0097A7"*/ hintText="#XXXXXX" id="prim2Col"></TextField>, <br/>
             &nbsp;&nbsp; primary3Color: <TextField hintStyle={styles.dir3} /*defaultValue="#BDBDBD"*/ hintText="#XXXXXX" id="prim3Col"></TextField>, <br/>
             &nbsp;&nbsp; accent1Color: <TextField hintStyle={styles.dir3} /*defaultValue="#FF4081"*/ hintText="#XXXXXX" id="acc1Col"></TextField>, <br/>
