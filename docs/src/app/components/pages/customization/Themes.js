@@ -819,20 +819,20 @@ class ThemesPage extends Component {
           <div style={styles.dir2}>
             getMuiTheme&#40;&#123; <br/>
             &nbsp; palette: &#123; <br/>
-            &nbsp;&nbsp; primary1Color: <TextField hintStyle={styles.dir3} /*defaultValue="#00BCD4"*/ hintText="#XXXXXX" id="prim1Col"></TextField>, <br/>
-            &nbsp;&nbsp; primary2Color: <TextField hintStyle={styles.dir3} /*defaultValue="#0097A7"*/ hintText="#XXXXXX" id="prim2Col"></TextField>, <br/>
-            &nbsp;&nbsp; primary3Color: <TextField hintStyle={styles.dir3} /*defaultValue="#BDBDBD"*/ hintText="#XXXXXX" id="prim3Col"></TextField>, <br/>
-            &nbsp;&nbsp; accent1Color: <TextField hintStyle={styles.dir3} /*defaultValue="#FF4081"*/ hintText="#XXXXXX" id="acc1Col"></TextField>, <br/>
-            &nbsp;&nbsp; accent2Color: <TextField hintStyle={styles.dir3} /*defaultValue="#F5F5F5"*/ hintText="#XXXXXX" id="acc2Col"></TextField>, <br/>
-            &nbsp;&nbsp; accent3Color: <TextField hintStyle={styles.dir3} /*defaultValue="#9E9E9E"*/ hintText="#XXXXXX" id="acc3Col"></TextField>, <br/>
-            &nbsp;&nbsp; textColor: <TextField hintStyle={styles.dir3} /*defaultValue="rgba(0, 0, 0, 0.87)"*/ hintText="#XXXXXX" id="txtCol"></TextField>, <br/>
-            &nbsp;&nbsp; alternateTextColor: <TextField hintStyle={styles.dir3} /*defaultValue="rgba(255, 255, 255, 1)"*/ hintText="#XXXXXX" id="altTxtCol"></TextField>, <br/>
-            &nbsp;&nbsp; canvasColor: <TextField hintStyle={styles.dir3} /*defaultValue="rgba(255, 255, 255, 1)"*/ hintText="#XXXXXX" id="canvCol"></TextField>, <br/>
-            &nbsp;&nbsp; borderColor: <TextField hintStyle={styles.dir3} /*defaultValue="#e0e0e0"*/ hintText="#XXXXXX" id="borCol"></TextField>, <br/>
-            &nbsp;&nbsp; disabledColor: <TextField hintStyle={styles.dir3} /*defaultValue="fade(darkBlack, 0.3)"*/ hintText="#XXXXXX" id="disCol"></TextField>, <br/>
-            &nbsp;&nbsp; pickerHeaderColor: <TextField hintStyle={styles.dir3} /*defaultValue="#00BCD4"*/ hintText="#XXXXXX" id="pickCol"></TextField>, <br/>
-            &nbsp;&nbsp; clockCircleColor: <TextField hintStyle={styles.dir3} /*defaultValue="fade(darkBlack, 0.07)"*/ hintText="#XXXXXX" id="clkCircCol"></TextField>, <br/>
-            &nbsp;&nbsp; shadowColor: <TextField hintStyle={styles.dir3} /*defaultValue="rgba(0, 0, 0, 1)"*/ hintText="#XXXXXX" id="shadCol"></TextField>, <br/>
+            &nbsp;&nbsp; primary1Color: <TextField hintStyle={styles.dir3} hintText="#XXXXXX" id="prim1Col"></TextField>, <br/>
+            &nbsp;&nbsp; primary2Color: <TextField hintStyle={styles.dir3} hintText="#XXXXXX" id="prim2Col"></TextField>, <br/>
+            &nbsp;&nbsp; primary3Color: <TextField hintStyle={styles.dir3} hintText="#XXXXXX" id="prim3Col"></TextField>, <br/>
+            &nbsp;&nbsp; accent1Color: <TextField hintStyle={styles.dir3} hintText="#XXXXXX" id="acc1Col"></TextField>, <br/>
+            &nbsp;&nbsp; accent2Color: <TextField hintStyle={styles.dir3} hintText="#XXXXXX" id="acc2Col"></TextField>, <br/>
+            &nbsp;&nbsp; accent3Color: <TextField hintStyle={styles.dir3} hintText="#XXXXXX" id="acc3Col"></TextField>, <br/>
+            &nbsp;&nbsp; textColor: <TextField hintStyle={styles.dir3} hintText="#XXXXXX" id="txtCol"></TextField>, <br/>
+            &nbsp;&nbsp; alternateTextColor: <TextField hintStyle={styles.dir3} hintText="#XXXXXX" id="altTxtCol"></TextField>, <br/>
+            &nbsp;&nbsp; canvasColor: <TextField hintStyle={styles.dir3} hintText="#XXXXXX" id="canvCol"></TextField>, <br/>
+            &nbsp;&nbsp; borderColor: <TextField hintStyle={styles.dir3}  hintText="#XXXXXX" id="borCol"></TextField>, <br/>
+            &nbsp;&nbsp; disabledColor: <TextField hintStyle={styles.dir3} hintText="#XXXXXX" id="disCol"></TextField>, <br/>
+            &nbsp;&nbsp; pickerHeaderColor: <TextField hintStyle={styles.dir3}  hintText="#XXXXXX" id="pickCol"></TextField>, <br/>
+            &nbsp;&nbsp; clockCircleColor: <TextField hintStyle={styles.dir3} hintText="#XXXXXX" id="clkCircCol"></TextField>, <br/>
+            &nbsp;&nbsp; shadowColor: <TextField hintStyle={styles.dir3} hintText="#XXXXXX" id="shadCol"></TextField>, <br/>
             &nbsp;&#125;, <br/>
             &#125;&#41; <br/>
             <div style={styles.containerCentered}>
