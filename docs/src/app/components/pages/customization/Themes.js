@@ -17,7 +17,6 @@ import Subheader from 'material-ui/Subheader';
 import Divider from 'material-ui/Divider';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {cyan500, red500} from 'material-ui/styles/colors';
-import {darken, fade, emphasize, lighten} from '../utils/colorManipulator';y
 
 import {
   AppBar,
@@ -43,10 +42,10 @@ import {
 
 var prm1col = "#00BCD4";
 var prm2col = "#0097A7";
-var prm3col = "#BDBDBD";
+var prm3col = "#BDBDBD";/*
 var acc1col = "#FF4081";
 var acc2col = "#F5F5F5";
-var acc3col = "#9E9E9E";/*
+var acc3col = "#9E9E9E";
 var txtcol = rgba(0, 0, 0, 0.87);
 var alttxtcol = "#FFFFFF";
 var canvcol = "#FFFFFF";
@@ -668,6 +667,7 @@ class ThemesPage extends Component {
     else{
       var prm3col = "#BDBDBD";
     }
+    /*
     if(document.getElementById("acc1Col").value != ""){
       acc1col = document.getElementById("acc1Col").value;
     }
@@ -686,7 +686,6 @@ class ThemesPage extends Component {
     else{
       var acc3col = "#9E9E9E";
     }
-    /*
     if(document.getElementById("txtCol").value != ""){
       txtcol = document.getElementById("txtCol").value;
     }
@@ -744,10 +743,10 @@ class ThemesPage extends Component {
         primary1Color: prm1col,
         primary2Color: prm2col,
         primary3Color: prm3col,
-        accent1Color: acc1col,
+        /*accent1Color: acc1col,
         accent2Color: acc2col,
         accent3Color: acc3col,
-        /*textColor: txtcol,
+        textColor: txtcol,
         alternateTextColor: alttxtcol,
         canvasColor: canvcol,
         borderColor: barcol,
