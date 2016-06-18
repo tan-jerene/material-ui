@@ -17,7 +17,7 @@ import Subheader from 'material-ui/Subheader';
 import Divider from 'material-ui/Divider';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {cyan500, red500} from 'material-ui/styles/colors';
-import {darken, fade, emphasize, lighten} from '../utils/colorManipulator';
+import {darken, fade, emphasize, lighten} from 'material-ui/utils/colorManipulator';
 
 import {
   AppBar,
