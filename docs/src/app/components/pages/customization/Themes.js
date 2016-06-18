@@ -17,6 +17,7 @@ import Subheader from 'material-ui/Subheader';
 import Divider from 'material-ui/Divider';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {cyan500, red500} from 'material-ui/styles/colors';
+import {darken, fade, emphasize, lighten} from '../utils/colorManipulator';y
 
 import {
   AppBar,
@@ -45,8 +46,8 @@ var prm2col = "#0097A7";
 var prm3col = "#BDBDBD";
 var acc1col = "#FF4081";
 var acc2col = "#F5F5F5";
-var acc3col = "#9E9E9E";
-var txtcol = rgba(0, 0, 0, 0.87);/*
+var acc3col = "#9E9E9E";/*
+var txtcol = rgba(0, 0, 0, 0.87);
 var alttxtcol = "#FFFFFF";
 var canvcol = "#FFFFFF";
 var borcol = "#e0e0e0";
@@ -685,30 +686,30 @@ class ThemesPage extends Component {
     else{
       var acc3col = "#9E9E9E";
     }
+    /*
     if(document.getElementById("txtCol").value != ""){
       txtcol = document.getElementById("txtCol").value;
     }
     else{
-      var txtcol = rgba(0, 0, 0, 0.87);
+      var borcol = "#e0e0e0";
     }
-    /*
     if(document.getElementById("altTxtCol").value != ""){
       alttxtcol = document.getElementById("altTxtCol").value;
     }
     else{
-      var alttxtcol = "#FFFFFF";
+      var txtcol = rgba(0, 0, 0, 0.87);
     }
     if(document.getElementById("canvCol").value != ""){
       canvcol = document.getElementById("canvCol").value;
     }
     else{
-      var canvcol = "#FFFFFF";
+      var alttxtcol = "#FFFFFF";
     }
     if(document.getElementById("borCol").value != ""){
       borcol = document.getElementById("borCol").value;
     }
     else{
-      var borcol = "#e0e0e0";
+      var canvcol = "#FFFFFF";
     }
     if(document.getElementById("disCol").value != ""){
       discol = document.getElementById("disCol").value;
@@ -746,8 +747,8 @@ class ThemesPage extends Component {
         accent1Color: acc1col,
         accent2Color: acc2col,
         accent3Color: acc3col,
-        textColor: txtcol,
-        /*alternateTextColor: alttxtcol,
+        /*textColor: txtcol,
+        alternateTextColor: alttxtcol,
         canvasColor: canvcol,
         borderColor: barcol,
         disabledColor: discol,
