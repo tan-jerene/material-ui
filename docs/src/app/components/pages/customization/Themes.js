@@ -629,13 +629,6 @@ class ThemesPage extends Component {
     else if (valueTabs === 'dark') {
       newMuiTheme = getMuiTheme(darkBaseTheme);
     }
-    else {
-      newMuiTheme = getMuiTheme({
-        palette: {
-          primary1Color: red500,
-        },
-      });
-    }
 
     newMuiTheme.name = valueTabs;
 
@@ -801,9 +794,6 @@ class ThemesPage extends Component {
           <Tab
             label="Dark Theme"
             value="dark" />
-          <Tab
-            label="Custom Theme"
-            value="custom" />
         </Tabs>
         {this.getComponentGroup()}
       </div>
