@@ -629,6 +629,13 @@ class ThemesPage extends Component {
     else if (valueTabs === 'dark') {
       newMuiTheme = getMuiTheme(darkBaseTheme);
     }
+    else {
+      newMuiTheme = getMuiTheme({
+        palette: {
+          primary1Color: red500,
+        },
+      });
+    }
 
     newMuiTheme.name = valueTabs;
 
