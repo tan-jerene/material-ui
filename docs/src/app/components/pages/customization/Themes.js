@@ -802,9 +802,6 @@ class ThemesPage extends Component {
           <Tab
             label="Dark Theme"
             value="dark" />
-          <Tab
-            label="Custom Theme"
-            value="custom" />
         </Tabs>
         {this.getComponentGroup()}
       </div>
