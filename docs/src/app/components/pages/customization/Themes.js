@@ -45,8 +45,8 @@ var prm2col = "#0097A7";
 var prm3col = "#BDBDBD";
 var acc1col = "#FF4081";
 var acc2col = "#F5F5F5";
-var acc3col = "#9E9E9E";/*
-var txtcol = rgba(0, 0, 0, 0.87);
+var acc3col = "#9E9E9E";
+var txtcol = rgba(0, 0, 0, 0.87);/*
 var alttxtcol = "#FFFFFF";
 var canvcol = "#FFFFFF";
 var borcol = "#e0e0e0";
@@ -685,30 +685,30 @@ class ThemesPage extends Component {
     else{
       var acc3col = "#9E9E9E";
     }
-    /*
     if(document.getElementById("txtCol").value != ""){
       txtcol = document.getElementById("txtCol").value;
     }
     else{
-      var borcol = "#e0e0e0";
+      var txtcol = rgba(0, 0, 0, 0.87);
     }
+    /*
     if(document.getElementById("altTxtCol").value != ""){
       alttxtcol = document.getElementById("altTxtCol").value;
     }
     else{
-      var txtcol = rgba(0, 0, 0, 0.87);
+      var alttxtcol = "#FFFFFF";
     }
     if(document.getElementById("canvCol").value != ""){
       canvcol = document.getElementById("canvCol").value;
     }
     else{
-      var alttxtcol = "#FFFFFF";
+      var canvcol = "#FFFFFF";
     }
     if(document.getElementById("borCol").value != ""){
       borcol = document.getElementById("borCol").value;
     }
     else{
-      var canvcol = "#FFFFFF";
+      var borcol = "#e0e0e0";
     }
     if(document.getElementById("disCol").value != ""){
       discol = document.getElementById("disCol").value;
