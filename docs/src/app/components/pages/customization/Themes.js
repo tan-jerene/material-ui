@@ -43,17 +43,17 @@ import {
 var prm1col = "#00BCD4";
 var prm2col = "#0097A7";
 var prm3col = "#BDBDBD";
-var acc1col = "#FF4081";/*
+var acc1col = "#FF4081";
 var acc2col = "#F5F5F5";
 var acc3col = "#9E9E9E";
-var txtcol = rgba(0, 0, 0, 0.87);
+var txtcol = "rgba(0, 0, 0, 0.87)";
 var alttxtcol = "#FFFFFF";
 var canvcol = "#FFFFFF";
 var borcol = "#e0e0e0";
-var discol = fade(rgba(0, 0, 0, 0.87), 0.3);
+var discol = fade("rgba(0, 0, 0, 0.87)", 0.3);
 var pkCol = "#00BCD4";
-var ckCrCol = fade(rgba(0, 0, 0, 0.87), 0.07);
-var sdCol = rgba(0, 0, 0, 1);*/
+var ckCrCol = fade("rgba(0, 0, 0, 0.87)", 0.07);
+var sdCol = "rgba(0, 0, 0, 1)";
 
 var stl = "ltr";
 const codeWithoutAux =
@@ -673,7 +673,6 @@ class ThemesPage extends Component {
     else{
       var acc1col = "#FF4081";
     }
-    /*
     if(document.getElementById("acc2Col").value != ""){
       acc2col = document.getElementById("acc2Col").value;
     }
@@ -690,7 +689,7 @@ class ThemesPage extends Component {
       txtcol = document.getElementById("txtCol").value;
     }
     else{
-      var txtcol = rgba(0, 0, 0, 0.87);
+      var txtcol = "rgba(0, 0, 0, 0.87)";
     }
     if(document.getElementById("altTxtCol").value != ""){
       alttxtcol = document.getElementById("altTxtCol").value;
@@ -714,7 +713,7 @@ class ThemesPage extends Component {
       discol = document.getElementById("disCol").value;
     }
     else{
-      var discol = fade(rgba(0, 0, 0, 0.87), 0.3);
+      var discol = fade("rgba(0, 0, 0, 0.87)", 0.3);
     }
     if(document.getElementById("pickCol").value != ""){
       pkCol = document.getElementById("pickCol").value;
@@ -726,15 +725,14 @@ class ThemesPage extends Component {
       ckCrCol = document.getElementById("clkCircCol").value;
     }
     else{
-      var ckCrCol = fade(rgba(0, 0, 0, 0.87), 0.07);
+      var ckCrCol = fade("rgba(0, 0, 0, 0.87)", 0.07);
     }
     if(document.getElementById("shadCol").value != ""){
       sdCol = document.getElementById("shadCol").value;
     }
     else{
-      var sdCol = rgba(0, 0, 0, 1);
+      var sdCol = "rgba(0, 0, 0, 1)";
     }
-    */
 
     console.log(prm1col);
     //console.log(document.getElementById("prim1Col").value);
@@ -744,7 +742,7 @@ class ThemesPage extends Component {
         primary2Color: prm2col,
         primary3Color: prm3col,
         accent1Color: acc1col,
-        /*accent2Color: acc2col,
+        accent2Color: acc2col,
         accent3Color: acc3col,
         textColor: txtcol,
         alternateTextColor: alttxtcol,
@@ -753,7 +751,7 @@ class ThemesPage extends Component {
         disabledColor: discol,
         pickerHeaderColor: pkCol,
         clockCircleColor: ckCrCol,
-        shadowColor: sdCol,*/
+        shadowColor: sdCol,
       },
     });
 
