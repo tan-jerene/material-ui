@@ -462,6 +462,7 @@ class ThemesPage extends Component {
             <CodeExample code={codeCheckbox} component={false}>
               <MuiThemeProvider muiTheme={cboxMuiTheme}>
                 <Checkbox 
+                  dir="rtl"
                   style={styles.muiOverride}
                   //id="checkboxIdX"
                   name="checkboxName1"
