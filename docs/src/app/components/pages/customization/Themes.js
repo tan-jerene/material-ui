@@ -139,9 +139,7 @@ const codeCheckbox =
       '    fill: \'#FF4081\'\n' +
       '  }} />\n\n' +
       '/**Excerpt for cboxMuiTheme**/\n' + 
-      'const cboxMuiTheme = getMuiTheme({\n' +
-      ' isRtl: false,\n' +
-      '});\n' +
+      'const cboxMuiTheme = getMuiTheme({isRtl:true});\n\n' +
       '/**Excerpt from CSS**/\n' + 
       '#checkboxIdX {\n' +
       '  direction: rtl;\n' +
@@ -275,9 +273,7 @@ class ThemesPage extends Component {
   }
 
   getAlignmentGroup() {
-    const cboxMuiTheme = getMuiTheme({
-      isRtl: true,
-    });
+    const cboxMuiTheme = getMuiTheme({isRtl: true,});
     const styles = this.getStyles();
 
     return (
@@ -771,7 +767,7 @@ class ThemesPage extends Component {
 
       if (valueTabs === 'ltr') {
         //stl = "ltr";
-        //document.querySelector("body").style.direction = "ltr";
+        //document.querySelector("body").style.direction = "rtl";
         newMuiTheme = getMuiTheme({
           isRtl: false,
         });
