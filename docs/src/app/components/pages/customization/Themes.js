@@ -273,9 +273,7 @@ class ThemesPage extends Component {
   }
 
   getAlignmentGroup() {
-    /*const cboxMuiTheme = getMuiTheme({
-            isRtl: true,
-          });*/
+    /*const cboxMuiTheme = getMuiTheme({isRtl: true,});*/
     cboxMuiTheme.name = "RTL";
     const styles = this.getStyles();
 
@@ -770,11 +768,15 @@ class ThemesPage extends Component {
       let newMuiTheme = null;
 
       if (valueTabs === 'ltr') {
+        //stl = "ltr";
+        //document.querySelector("body").style.direction = "rtl";
         newMuiTheme = getMuiTheme({
           isRtl: false,
         });
       } 
       else {
+        //stl = "rtl";
+        //document.querySelector("body").style.direction = "rtl";
         newMuiTheme = getMuiTheme({
           isRtl: true,
         });
