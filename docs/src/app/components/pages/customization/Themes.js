@@ -131,7 +131,6 @@ const codeWithAux =
     '</List>\n';
 const codeCheckbox =
       '<Checkbox \n' +
-      '  dir="rtl"\n' +
       '  //id="checkboxIdX"\n' +
       '  name="checkboxName1"\n' +
       '  value="checkboxValue1"\n' +
@@ -274,9 +273,9 @@ class ThemesPage extends Component {
   }
 
   getAlignmentGroup() {
-    const cboxMuiTheme = getMuiTheme({
+    /*const cboxMuiTheme = getMuiTheme({
             isRtl: true,
-          });
+          });*/
     cboxMuiTheme.name = "RTL";
     const styles = this.getStyles();
 
@@ -461,9 +460,8 @@ class ThemesPage extends Component {
             <h3 style={styles.title}>True RTL support in Material-UI - <span style={styles.dir1}>isRtl</span> key (JS <span style={styles.dir1}>muiTheme</span> Object)</h3>
             <div>As mentioned above the isRtl key is the React Native way to set the alignment of React components</div>
             <CodeExample code={codeCheckbox} component={false}>
-              <MuiThemeProvider muiTheme={cboxMuiTheme}>
+              <MuiThemeProvider muiTheme={getMuiTheme({isRtl: true,});}>
                 <Checkbox 
-                  dir="rtl"
                   style={styles.muiOverride}
                   //id="checkboxIdX"
                   name="checkboxName1"
@@ -772,15 +770,11 @@ class ThemesPage extends Component {
       let newMuiTheme = null;
 
       if (valueTabs === 'ltr') {
-        //stl = "ltr";
-        //document.querySelector("body").style.direction = "rtl";
         newMuiTheme = getMuiTheme({
           isRtl: false,
         });
       } 
       else {
-        //stl = "rtl";
-        //document.querySelector("body").style.direction = "rtl";
         newMuiTheme = getMuiTheme({
           isRtl: true,
         });
