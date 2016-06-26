@@ -140,6 +140,9 @@ const codeCheckbox =
       '  }} />\n\n' +
       '/**Excerpt for cboxMuiTheme**/\n' + 
       'const cboxMuiTheme = getMuiTheme({isRtl:true,});\n\n' +
+        newMuiTheme = getMuiTheme({
+          isRtl: false,
+        });
       '/**Excerpt from CSS**/\n' + 
       '#checkboxIdX {\n' +
       '  direction: rtl;\n' +
@@ -273,7 +276,9 @@ class ThemesPage extends Component {
   }
 
   getAlignmentGroup() {
-    const cboxMuiTheme = getMuiTheme({isRtl: true,});
+    const cboxMuiTheme = getMuiTheme({
+      isRtl: true,
+    });
     const styles = this.getStyles();
 
     return (
