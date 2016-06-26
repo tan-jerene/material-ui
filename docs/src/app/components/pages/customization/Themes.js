@@ -276,6 +276,7 @@ class ThemesPage extends Component {
     const cboxMuiTheme = getMuiTheme({
             isRtl: true,
           });
+    cboxMuiTheme.name = "RTL";
     const styles = this.getStyles();
 
     return (
@@ -462,7 +463,7 @@ class ThemesPage extends Component {
               <MuiThemeProvider muiTheme={cboxMuiTheme}>
                 <Checkbox 
                   style={styles.muiOverride}
-                  id="checkboxIdX"
+                  //id="checkboxIdX"
                   name="checkboxName1"
                   value="checkboxValue1"
                   label="Material-UI is awesome!"
