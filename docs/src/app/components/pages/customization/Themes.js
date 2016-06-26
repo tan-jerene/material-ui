@@ -131,7 +131,8 @@ const codeWithAux =
     '</List>\n';
 const codeCheckbox =
       '<Checkbox \n' +
-      '  id="checkboxIdX"\n' +
+      '  dir="rtl"\n' +
+      '  //id="checkboxIdX"\n' +
       '  name="checkboxName1"\n' +
       '  value="checkboxValue1"\n' +
       '  label="Material-UI is awesome!"\n' +
@@ -140,10 +141,10 @@ const codeCheckbox =
       '  }} />\n\n' +
       '/**Excerpt for cboxMuiTheme**/\n' + 
       'const cboxMuiTheme = getMuiTheme({isRtl:true,});\n\n' +
-      '/**Excerpt from CSS**/\n' + 
+      '/**Excerpt from CSS\n' + 
       '#checkboxIdX {\n' +
       '  direction: rtl;\n' +
-      '}';
+      '}**/';
 
 const markdownText = `
 ## Themes
