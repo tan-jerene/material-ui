@@ -772,7 +772,7 @@ class ThemesPage extends Component {
 
       if (valueTabs === 'ltr') {
         //stl = "ltr";
-        //document.querySelector("body").style.direction = "rtl";
+        //document.querySelector("body").style.direction = "ltr";
         newMuiTheme = getMuiTheme({
           isRtl: false,
         });
