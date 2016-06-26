@@ -749,7 +749,7 @@ class ThemesPage extends Component {
         textColor: txtcol,
         alternateTextColor: alttxtcol,
         canvasColor: canvcol,
-        borderColor: barcol,
+        borderColor: borcol,
         disabledColor: discol,
         pickerHeaderColor: pkCol,
         clockCircleColor: ckCrCol,
