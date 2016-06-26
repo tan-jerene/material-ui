@@ -652,6 +652,7 @@ class ThemesPage extends Component {
     let newMuiTheme = null;
     if(document.getElementById("prim1Col").value != ""){
       prm1col = document.getElementById("prim1Col").value;
+      console.log(prm1col);
     }
     else{
       var prm1col = "#00BCD4";
