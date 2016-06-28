@@ -140,8 +140,6 @@ const codeCheckbox =
       '       fill: \'#FF4081\'\n' +
       '     }} />\n' +
       '</MuiThemeProvider>\n\n' +
-      '/**Excerpt for cboxMuiTheme**/\n' + 
-      'const cboxMuiTheme = getMuiTheme({isRtl:true,});\n\n' +
       '/**Excerpt from CSS\n' + 
       '#checkboxIdX {\n' +
       '  direction: rtl;\n' +
