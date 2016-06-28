@@ -130,14 +130,16 @@ const codeWithAux =
     '  </div>\n' +
     '</List>\n';
 const codeCheckbox =
-      '<Checkbox \n' +
-      '  //id="checkboxIdX"\n' +
-      '  name="checkboxName1"\n' +
-      '  value="checkboxValue1"\n' +
-      '  label="Material-UI is awesome!"\n' +
-      '  iconStyle={{\n' +
-      '    fill: \'#FF4081\'\n' +
-      '  }} />\n\n' +
+      '<MuiThemeProvider muiTheme={getMuiTheme({isRtl: true,})}>\n' +
+      '   <Checkbox \n' +
+      '     //id="checkboxIdX"\n' +
+      '     name="checkboxName1"\n' +
+      '     value="checkboxValue1"\n' +
+      '     label="Material-UI is awesome!"\n' +
+      '     iconStyle={{\n' +
+      '       fill: \'#FF4081\'\n' +
+      '     }} />\n' +
+      '</MuiThemeProvider>\n\n' +
       '/**Excerpt for cboxMuiTheme**/\n' + 
       'const cboxMuiTheme = getMuiTheme({isRtl:true,});\n\n' +
       '/**Excerpt from CSS\n' + 
@@ -273,8 +275,6 @@ class ThemesPage extends Component {
   }
 
   getAlignmentGroup() {
-    /*const cboxMuiTheme = getMuiTheme({isRtl: true,});
-    cboxMuiTheme.name = "RTL";*/
     const styles = this.getStyles();
 
     return (
