@@ -93,7 +93,7 @@ const codeWithoutAux =
     '</List>\n';
 
 const codeWithAux =
-    '<List  style={{overflow: \'auto\', maxHeight: 200}}>\n' +
+    '<List style={{overflow: \'auto\', maxHeight: 200}}>\n' +
     '  <div> dir="rtl"\n' +
     '  <Subheader>Recent chats</Subheader>\n' +
     '  <ListItem\n' +
@@ -273,6 +273,7 @@ class ThemesPage extends Component {
   }
 
   getAlignmentGroup() {
+    let cboxMuiTheme = getMuiTheme({isRtl: true,});
     const styles = this.getStyles();
 
     return (
@@ -456,7 +457,7 @@ class ThemesPage extends Component {
             <h3 style={styles.title}>True RTL support in Material-UI - <span style={styles.dir1}>isRtl</span> key (JS <span style={styles.dir1}>muiTheme</span> Object)</h3>
             <div>As mentioned above the isRtl key is the React Native way to set the alignment of React components</div>
             <CodeExample code={codeCheckbox} component={false}>
-              <MuiThemeProvider muiTheme={getMuiTheme({isRtl: true,})}>
+              <MuiThemeProvider muiTheme={cboxMuiTheme}>
                 <Checkbox 
                   style={styles.muiOverride}
                   //id="checkboxIdX"
