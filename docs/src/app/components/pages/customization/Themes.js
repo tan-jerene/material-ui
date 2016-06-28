@@ -130,7 +130,7 @@ const codeWithAux =
     '  </div>\n' +
     '</List>\n';
 const codeCheckbox =
-      '<MuiThemeProvider muiTheme={getMuiTheme({isRtl: true,})}>\n' +
+      '<MuiThemeProvider muiTheme={cboxMuiTheme}>\n' +
       '   <Checkbox \n' +
       '     //id="checkboxIdX"\n' +
       '     name="checkboxName1"\n' +
@@ -140,10 +140,8 @@ const codeCheckbox =
       '       fill: \'#FF4081\'\n' +
       '     }} />\n' +
       '</MuiThemeProvider>\n\n' +
-      '/**Excerpt from CSS\n' + 
-      '#checkboxIdX {\n' +
-      '  direction: rtl;\n' +
-      '}**/';
+      '/** cboxMuiTheme Declaration **/\n' +
+      'let cboxMuiTheme = getMuiTheme({isRtl: true,});';
 
 const markdownText = `
 ## Themes
