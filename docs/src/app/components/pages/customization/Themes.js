@@ -273,8 +273,8 @@ class ThemesPage extends Component {
   }
 
   getAlignmentGroup() {
-    /*const cboxMuiTheme = getMuiTheme({isRtl: true,});*/
-    cboxMuiTheme.name = "RTL";
+    /*const cboxMuiTheme = getMuiTheme({isRtl: true,});
+    cboxMuiTheme.name = "RTL";*/
     const styles = this.getStyles();
 
     return (
