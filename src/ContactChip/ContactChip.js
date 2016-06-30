@@ -252,6 +252,7 @@ class ContactChip extends Component {
     const childCount = React.Children.count(children);
 
     // If the first child is an avatar, extract it and style it
+    var child = null;
     if (childCount > 1) {
       children = React.Children.toArray(children);
       for (child in children) {
