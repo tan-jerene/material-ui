@@ -254,7 +254,7 @@ class ContactChip extends Component {
     // If the first child is an avatar, extract it and style it
     if (childCount > 1) {
       children = React.Children.toArray(children);
-      for (var child in children) {
+      for (child in children) {
         console.log(child.type.muiName);
       }
       if (React.isValidElement(children[0]) && children[0].type.muiName === 'Avatar') {
