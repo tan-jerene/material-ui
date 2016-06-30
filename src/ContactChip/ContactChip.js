@@ -46,11 +46,11 @@ class ContactChip extends Component {
 
   static propTypes = {
     /**
-     * Override the background color of the chip.
+     * Override the background color of the ContactChip.
      */
     backgroundColor: PropTypes.string,
     /**
-     * Used to render elements inside the Chip.
+     * Used to render elements inside the ContactChip.
      */
     children: PropTypes.node,
     /**
@@ -91,7 +91,7 @@ class ContactChip extends Component {
     /** @ignore */
     onTouchStart: PropTypes.func,
     /**
-     * Callback function fired when the `Chip` element is touch-tapped.
+     * Callback function fired when the `ContactChip` element is touch-tapped.
      *
      * @param {object} event TouchTap event targeting the element.
      */
@@ -197,7 +197,7 @@ class ContactChip extends Component {
   };
 
   handleTouchTapDeleteIcon = (event) => {
-    // Stop the event from bubbling up to the `Chip`
+    // Stop the event from bubbling up to the `ContactChip`
     event.stopPropagation();
     this.props.onRequestDelete(event);
   };
@@ -254,7 +254,9 @@ class ContactChip extends Component {
     // If the first child is an avatar, extract it and style it
     if (childCount > 1) {
       children = React.Children.toArray(children);
-
+      for (var child in children) {
+        console.log(child.type.muiName);
+      }
       if (React.isValidElement(children[0]) && children[0].type.muiName === 'Avatar') {
         avatar = children.shift();
 
@@ -283,4 +285,4 @@ class ContactChip extends Component {
   }
 }
 
-export default Chip;
+export default ContactChip;
