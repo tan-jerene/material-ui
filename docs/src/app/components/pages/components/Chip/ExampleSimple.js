@@ -1,6 +1,7 @@
 import React from 'react';
 import Avatar from 'material-ui/Avatar';
 import Chip from 'material-ui/Chip';
+import ContactChip from 'material-ui/ContactChip';
 import FontIcon from 'material-ui/FontIcon';
 import SvgIconFace from 'material-ui/svg-icons/action/face';
 import {blue300, indigo900} from 'material-ui/styles/colors';
