@@ -3,7 +3,6 @@ import keycode from 'keycode';
 import {fade, emphasize} from '../utils/colorManipulator';
 import EnhancedButton from '../internal/EnhancedButton';
 import DeleteIcon from '../svg-icons/navigation/cancel';
-var child = null;
 
 function getStyles(props, context, state) {
   const {chip} = context.muiTheme;
@@ -253,10 +252,13 @@ class ContactChip extends Component {
     const childCount = React.Children.count(children);
 
     // If the first child is an avatar, extract it and style it
+    var child = null;
     if (childCount > 1) {
       children = React.Children.toArray(children);
       for (child in children) {
-        console.log(child.type.muiName);
+        if (React.isValidElement(children[0])){
+          console.log(child.type.muiName);
+        }
       }
       if (React.isValidElement(children[0]) && children[0].type.muiName === 'Avatar') {
         avatar = children.shift();
