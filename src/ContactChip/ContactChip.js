@@ -256,7 +256,7 @@ class ContactChip extends Component {
     if (childCount > 1) {
       children = React.Children.toArray(children);
       for (child in children) {
-        if (React.isValidElement(children[0])){
+        if (React.isValidElement(child)){
           console.log(child.type.muiName);
         }
       }
