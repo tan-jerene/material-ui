@@ -50,13 +50,13 @@ export default class ChipExampleSimple extends React.Component {
           Deletable Text Chip
         </Chip>
 
-        <Chip
+        <ContactChip
           onTouchTap={handleTouchTap}
           style={styles.chip}
         >
           <Avatar src="images/uxceo-128.jpg" />
           Image Avatar Chip
-        </Chip>
+        </ContactChip>
 
         <Chip
           onRequestDelete={handleRequestDelete}
