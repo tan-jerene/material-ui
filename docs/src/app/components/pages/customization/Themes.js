@@ -844,7 +844,7 @@ class ThemesPage extends Component {
           <ClearFix style={styles.liveExampleBlock}>{this.getThemeExamples()}</ClearFix>
         </Paper>
         <h2 style={styles.title}>Customized Themes</h2>
-        <div>The <span style={styles.dir1}>getMuiTheme</span> function of Material-UI allows the user to customize the theme. This can be done by changing the <span style={styles.dir1}>palette</span> which accordingly change all components with a given styling and/or changing individual components. The following will demonstrate the usage of the <span style={styles.dir1}>palette</span> key. Test it out!</div>
+        <div>The <span style={styles.dir1}>getMuiTheme</span> object of Material-UI allows the user to customize the theme. This can be done by changing the <span style={styles.dir1}>palette</span> which accordingly change all components with a given styling and/or changing individual components. The following will demonstrate the usage of the <span style={styles.dir1}>palette</span> key. Test it out!</div>
         <div style={styles.bottomBorderWrapper}>
           <div style={styles.dir2}>
             getMuiTheme&#40;&#123; <br/>
