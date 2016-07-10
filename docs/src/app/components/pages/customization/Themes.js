@@ -454,7 +454,7 @@ class ThemesPage extends Component {
             </List>
             </CodeExample>
             <h3 style={styles.title}>True RTL support in Material-UI - <span style={styles.dir1}>isRtl</span> key (JS <span style={styles.dir1}>muiTheme</span> Object)</h3>
-            <div>As mentioned above the isRtl key is the React Native way to set the alignment of React components</div>
+            <div>As mentioned above the isRtl key is the React Native way to set the alignment of React components. Below is the event handler for the RTL tabs.</div>
             <div style={styles.bottomBorderWrapper}>
               <MarkdownElement id="md" text={trueRtl} />
             </div>

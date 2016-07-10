@@ -1,5 +1,4 @@
 ```js
-//RTL Tabs action handler
 handleChangeTabs2 = (valueTabs) => {
       let newMuiTheme = null;
 
