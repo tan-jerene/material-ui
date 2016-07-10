@@ -640,6 +640,7 @@ class ThemesPage extends Component {
     let newMuiTheme = null;
     if(document.getElementById("prim1Col").value != ""){
       prm1col = document.getElementById("prim1Col").value;
+      document.getElementById("prim1Col").value = "";
       console.log(prm1col);
     }
     else{
@@ -647,78 +648,91 @@ class ThemesPage extends Component {
     }
     if(document.getElementById("prim2Col").value != ""){
       prm2col = document.getElementById("prim2Col").value;
+      document.getElementById("prim2Col").value = "";
     }
     else{
       var prm2col = "#0097A7";
     }
     if(document.getElementById("prim3Col").value != ""){
       prm3col = document.getElementById("prim3Col").value;
+      document.getElementById("prim3Col").value = "";
     }
     else{
       var prm3col = "#BDBDBD";
     }
     if(document.getElementById("acc1Col").value != ""){
       acc1col = document.getElementById("acc1Col").value;
+      document.getElementById("acc1Col").value = "";
     }
     else{
       var acc1col = "#FF4081";
     }
     if(document.getElementById("acc2Col").value != ""){
       acc2col = document.getElementById("acc2Col").value;
+      document.getElementById("acc2Col").value = "";
     }
     else{
       var acc2col = "#F5F5F5";
     }
     if(document.getElementById("acc3Col").value != ""){
       acc3col = document.getElementById("acc3Col").value
+      document.getElementById("acc3Col").value = "";
     }
     else{
       var acc3col = "#9E9E9E";
     }
     if(document.getElementById("txtCol").value != ""){
       txtcol = document.getElementById("txtCol").value;
+      document.getElementById("txtCol").value = ""
     }
     else{
       var txtcol = "rgba(0, 0, 0, 0.87)";
     }
     if(document.getElementById("altTxtCol").value != ""){
       alttxtcol = document.getElementById("altTxtCol").value;
+      document.getElementById("altTxtCol").value = ""
     }
     else{
       var alttxtcol = "#FFFFFF";
     }
     if(document.getElementById("canvCol").value != ""){
       canvcol = document.getElementById("canvCol").value;
+      document.getElementById("canvCol").value = ""
     }
     else{
       var canvcol = "#FFFFFF";
     }
     if(document.getElementById("borCol").value != ""){
       borcol = document.getElementById("borCol").value;
+      document.getElementById("borCol").value = ""
     }
     else{
       var borcol = "#e0e0e0";
     }
     if(document.getElementById("disCol").value != ""){
       discol = document.getElementById("disCol").value;
+      document.getElementById("disCol").value = ""
     }
     else{
       var discol = fade("rgba(0, 0, 0, 0.87)", 0.3);
     }
     if(document.getElementById("pickCol").value != ""){
       pkCol = document.getElementById("pickCol").value;
+      document.getElementById("pickCol").value = ""
     }
     else{
       var pkCol = "#00BCD4";
     }
     if(document.getElementById("clkCircCol").value != ""){
       ckCrCol = document.getElementById("clkCircCol").value;
+      document.getElementById("clkCircCol").value = ""
     }
     else{
       var ckCrCol = fade("rgba(0, 0, 0, 0.87)", 0.07);
     }
     if(document.getElementById("shadCol").value != ""){
       sdCol = document.getElementById("shadCol").value;
+      document.getElementById("shadCol").value = ""
     }
     else{
       var sdCol = "rgba(0, 0, 0, 1)";
