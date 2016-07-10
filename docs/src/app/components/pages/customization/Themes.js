@@ -7,6 +7,7 @@ import withWidth, {MEDIUM} from 'material-ui/utils/withWidth';
 import typography from 'material-ui/styles/typography';
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import themesText from './themes.md';
+import trueRtl from './trueRtl.md';
 import ClearFix from 'material-ui/internal/ClearFix';
 import CommunicationChatBubble from 'material-ui/svg-icons/communication/chat-bubble';
 import CodeExample from '../../CodeExample';
@@ -371,7 +372,7 @@ class ThemesPage extends Component {
             <MarkdownElement text={alignText} />
           </div>
           <h3 style={styles.title}>Maintaining Directionality</h3>
-          <div>When rendering in RTL some browsers change the directionality of the interface rather than just the alignment of text components. This includes the position of scrolling bars etc. This may not be desirable. The following can be done to safeguard against this issue. 
+          <div>When rendering in RTL, some browsers change the directionality of the interface rather than just the alignment of text components. This includes the position of scrolling bars etc. This may not be desirable. The following can be done to safeguard against this issue. 
           </div>
           <br/>
           <h4>Right-To-Left Alignment - With misaligned scroll-bar</h4>
@@ -412,7 +413,7 @@ class ThemesPage extends Component {
             </CodeExample>
             <br/>
           <h4>Right-To-Left Alignment - With auxiliary <span style={styles.dir1}>&#60;div&#62;</span></h4>
-          <div>Rather than setting alignment values for each sub-component an additional component can be used that contains this attribute as follows:</div>
+          <div>An additional component can be used that contains this attribute rather than setting alignment values for each sub-component as follows:</div>
           <CodeExample code={codeWithAux} component={false} >
             <List style={{overflow: 'auto', maxHeight: 260}}>
               <div dir="rtl">
@@ -454,20 +455,9 @@ class ThemesPage extends Component {
             </CodeExample>
             <h3 style={styles.title}>True RTL support in Material-UI - <span style={styles.dir1}>isRtl</span> key (JS <span style={styles.dir1}>muiTheme</span> Object)</h3>
             <div>As mentioned above the isRtl key is the React Native way to set the alignment of React components</div>
-            <CodeExample code={codeCheckbox} component={false}>
-              <MuiThemeProvider muiTheme={cboxMuiTheme}>
-                <Checkbox 
-                  style={styles.muiOverride}
-                  //id="checkboxIdX"
-                  name="checkboxName1"
-                  value="checkboxValue1"
-                  label="Material-UI is awesome!"
-                  className="muidocs-checkbox-example"
-                  iconStyle={{
-                    fill: '#FF4081'
-                  }} />
-              </MuiThemeProvider>
-            </CodeExample>
+            <div style={styles.bottomBorderWrapper}>
+              <MarkdownElement id="md" text={trueRtl} />
+            </div>
           </div>
         );
   }
