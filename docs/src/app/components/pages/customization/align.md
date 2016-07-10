@@ -1,6 +1,6 @@
 ### How This Works
 
-The above was achieved by injecting a simple HTML attribute into the regular React Script:
+The above may be achieved by injecting a simple HTML attribute into the regular React Script:
 
 ```js
 import React from 'react';
