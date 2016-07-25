@@ -169,7 +169,7 @@ class ContactChip extends Component {
     if (event.button === 0) {
       event.stopPropagation();
       if (this.props.onTouchTap) {
-        this.setState({clicked: true
+        this.setState({clicked: true,
                        open: true,
                        anchorEl: event.currentTarget,});
       }
