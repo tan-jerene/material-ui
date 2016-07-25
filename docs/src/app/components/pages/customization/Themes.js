@@ -683,56 +683,56 @@ class ThemesPage extends Component {
     }
     if(document.getElementById("txtCol").value != ""){
       txtcol = document.getElementById("txtCol").value;
-      document.getElementById("txtCol").value = ""
+      document.getElementById("txtCol").value = "";
     }
     else{
       var txtcol = "rgba(0, 0, 0, 0.87)";
     }
     if(document.getElementById("altTxtCol").value != ""){
       alttxtcol = document.getElementById("altTxtCol").value;
-      document.getElementById("altTxtCol").value = ""
+      document.getElementById("altTxtCol").value = "";
     }
     else{
       var alttxtcol = "#FFFFFF";
     }
     if(document.getElementById("canvCol").value != ""){
       canvcol = document.getElementById("canvCol").value;
-      document.getElementById("canvCol").value = ""
+      document.getElementById("canvCol").value = "";
     }
     else{
       var canvcol = "#FFFFFF";
     }
     if(document.getElementById("borCol").value != ""){
       borcol = document.getElementById("borCol").value;
-      document.getElementById("borCol").value = ""
+      document.getElementById("borCol").value = "";
     }
     else{
       var borcol = "#e0e0e0";
     }
     if(document.getElementById("disCol").value != ""){
       discol = document.getElementById("disCol").value;
-      document.getElementById("disCol").value = ""
+      document.getElementById("disCol").value = "";
     }
     else{
       var discol = fade("rgba(0, 0, 0, 0.87)", 0.3);
     }
     if(document.getElementById("pickCol").value != ""){
       pkCol = document.getElementById("pickCol").value;
-      document.getElementById("pickCol").value = ""
+      document.getElementById("pickCol").value = "";
     }
     else{
       var pkCol = "#00BCD4";
     }
     if(document.getElementById("clkCircCol").value != ""){
       ckCrCol = document.getElementById("clkCircCol").value;
-      document.getElementById("clkCircCol").value = ""
+      document.getElementById("clkCircCol").value = "";
     }
     else{
       var ckCrCol = fade("rgba(0, 0, 0, 0.87)", 0.07);
     }
     if(document.getElementById("shadCol").value != ""){
       sdCol = document.getElementById("shadCol").value;
-      document.getElementById("shadCol").value = ""
+      document.getElementById("shadCol").value = "";
     }
     else{
       var sdCol = "rgba(0, 0, 0, 1)";

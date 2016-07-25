@@ -3,6 +3,9 @@ import keycode from 'keycode';
 import {fade, emphasize} from '../utils/colorManipulator';
 import EnhancedButton from '../internal/EnhancedButton';
 import DeleteIcon from '../svg-icons/navigation/cancel';
+import Popover from 'material-ui/Popover/Popover';
+import Menu from 'material-ui/Menu';
+import MenuItem from 'material-ui/MenuItem';
 
 function getStyles(props, context, state) {
   const {chip} = context.muiTheme;
@@ -60,7 +63,10 @@ class ContactChip extends Component {
     /**
      * Override the label color.
      */
-    labelColor: PropTypes.string,
+    emailprim: PropTypes.string, /*Recent addition*/
+    emailsec: PropTypes.string, /*Recent addition*/
+    emailter: PropTypes.string, /*Recent addition*/
+    labelColor: PropTypes.string, /*Recent addition*/
     /**
      * Override the inline-styles of the label.
      */
@@ -122,16 +128,17 @@ class ContactChip extends Component {
     deleteHovered: false,
     focused: false,
     hovered: false,
+    open: false,
   };
 
   handleBlur = (event) => {
-    this.setState({clicked: false, focused: false});
+    this.setState({clicked: false, focused: false, open: false,});
     this.props.onBlur(event);
   };
 
   handleFocus = (event) => {
     if (this.props.onTouchTap || this.props.onRequestDelete) {
-      this.setState({focused: true});
+      this.setState({focused: true,});
     }
     this.props.onFocus(event);
   };
@@ -157,42 +164,50 @@ class ContactChip extends Component {
     this.props.onKeyDown(event);
   };
 
-  handleMouseDown = (event) => {
+  handleMouseDown = (event) => { /*Recent Addition*/
     // Only listen to left clicks
     if (event.button === 0) {
       event.stopPropagation();
       if (this.props.onTouchTap) {
-        this.setState({clicked: true});
+        this.setState({clicked: true
+                       open: true,
+                       anchorEl: event.currentTarget,});
       }
-    }
     this.props.onMouseDown(event);
   };
 
   handleMouseEnter = (event) => {
     if (this.props.onTouchTap) {
-      this.setState({hovered: true});
+      this.setState({hovered: true,});
     }
     this.props.onMouseEnter(event);
   };
 
   handleMouseEnterDeleteIcon = () => {
-    this.setState({deleteHovered: true});
+    this.setState({deleteHovered: true,});
   };
 
   handleMouseLeave = (event) => {
     this.setState({
       clicked: false,
       hovered: false,
+      open: false,
     });
     this.props.onMouseLeave(event);
   };
 
+  handleRequestClose = () => { /*Recent addition*/
+    this.setState({
+      open: false,
+    });
+  };
+
   handleMouseLeaveDeleteIcon = () => {
-    this.setState({deleteHovered: false});
+    this.setState({deleteHovered: false,});
   };
 
   handleMouseUp = (event) => {
-    this.setState({clicked: false});
+    this.setState({clicked: false,});
     this.props.onMouseUp(event);
   };
 
@@ -203,14 +218,16 @@ class ContactChip extends Component {
   };
 
   handleTouchEnd = (event) => {
-    this.setState({clicked: false});
+    this.setState({clicked: false,});
     this.props.onTouchEnd(event);
   };
 
   handleTouchStart = (event) => {
     event.stopPropagation();
     if (this.props.onTouchTap) {
-      this.setState({clicked: true});
+      this.setState({clicked: true, 
+                     open: true,
+                     anchorEl: event.currentTarget,});
     }
     this.props.onTouchStart(event);
   };
@@ -284,6 +301,22 @@ class ContactChip extends Component {
         <span style={labelStyle}>{children}</span>
         {deleteIcon}
       </EnhancedButton>
+
+      /*Recent addition*/
+      const details = <Popover>
+          open={this.state.open}
+          anchorEl={this.state.anchorEl}
+          anchorOrigin={{"horizontal":"left","vertical":"top"}}
+          targetOrigin={{"horizontal":"left","vertical":"top"}}
+          onRequestClose={this.handleRequestClose}
+        >
+          <Menu>
+            <MenuItem primaryText={props.emailprim} />
+            <MenuItem primaryText={props.emailsec} />
+            <MenuItem primaryText={props.emailter} />
+          </Menu>
+      </Popover>;
+    }
     );
   }
 }

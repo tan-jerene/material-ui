@@ -51,7 +51,7 @@ export default class ChipExampleSimple extends React.Component {
         </Chip>
 
         <ContactChip
-          onTouchTap={handleTouchTap}
+          //onTouchTap={handleTouchTap}
           style={styles.chip}
         >
           <Avatar src="images/uxceo-128.jpg" />
