@@ -286,6 +286,7 @@ class ContactChip extends Component {
         });
       }
     }
+  }
 
     return (
       <EnhancedButton
@@ -316,7 +317,6 @@ class ContactChip extends Component {
             <MenuItem primaryText={props.emailter} />
           </Menu>
       </Popover>;
-    }
     );
   }
 }
