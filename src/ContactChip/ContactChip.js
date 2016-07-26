@@ -288,6 +288,7 @@ class ContactChip extends Component {
       }
     }
 
+    /*Recent addition - <Popover></Popover>*/
     return (
       <EnhancedButton
         {...other}
@@ -303,8 +304,7 @@ class ContactChip extends Component {
         {deleteIcon}
       </EnhancedButton>
 
-      /*Recent addition*/
-      const details = <Popover>
+      <Popover>
           open={this.state.open}
           anchorEl={this.state.anchorEl}
           anchorOrigin={{"horizontal":"left","vertical":"top"}}
