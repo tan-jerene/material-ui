@@ -173,6 +173,7 @@ class ContactChip extends Component {
                        open: true,
                        anchorEl: event.currentTarget,});
       }
+    }
     this.props.onMouseDown(event);
   };
 
@@ -286,7 +287,6 @@ class ContactChip extends Component {
         });
       }
     }
-  }
 
     return (
       <EnhancedButton
