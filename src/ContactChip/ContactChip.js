@@ -290,33 +290,35 @@ class ContactChip extends Component {
 
     /*Recent addition - <Popover></Popover>*/
     return (
-      <EnhancedButton
-        {...other}
-        {...buttonEventHandlers}
-        className={className}
-        containerElement="div" // Firefox doesn't support nested buttons
-        disableTouchRipple={true}
-        disableFocusRipple={true}
-        style={style}
-      >
-        {avatar}
-        <span style={labelStyle}>{children}</span>
-        {deleteIcon}
-      </EnhancedButton>
-
-      <Popover>
-          open={this.state.open}
-          anchorEl={this.state.anchorEl}
-          anchorOrigin={{"horizontal":"left","vertical":"top"}}
-          targetOrigin={{"horizontal":"left","vertical":"top"}}
-          onRequestClose={this.handleRequestClose}
+      <div>
+        <EnhancedButton
+          {...other}
+          {...buttonEventHandlers}
+          className={className}
+          containerElement="div" // Firefox doesn't support nested buttons
+          disableTouchRipple={true}
+          disableFocusRipple={true}
+          style={style}
         >
-          <Menu>
-            <MenuItem primaryText={props.emailprim} />
-            <MenuItem primaryText={props.emailsec} />
-            <MenuItem primaryText={props.emailter} />
-          </Menu>
-      </Popover>;
+          {avatar}
+          <span style={labelStyle}>{children}</span>
+          {deleteIcon}
+        </EnhancedButton>
+
+        <Popover>
+            open={this.state.open}
+            anchorEl={this.state.anchorEl}
+            anchorOrigin={{"horizontal":"left","vertical":"top"}}
+            targetOrigin={{"horizontal":"left","vertical":"top"}}
+            onRequestClose={this.handleRequestClose}
+          >
+            <Menu>
+              <MenuItem primaryText={props.emailprim} />
+              <MenuItem primaryText={props.emailsec} />
+              <MenuItem primaryText={props.emailter} />
+            </Menu>
+        </Popover>
+      </div>
     );
   }
 }
