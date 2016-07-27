@@ -313,9 +313,9 @@ class ContactChip extends Component {
             onRequestClose={this.handleRequestClose}
           >
             <Menu>
-              <MenuItem primaryText={props.emailprim} />
-              <MenuItem primaryText={props.emailsec} />
-              <MenuItem primaryText={props.emailter} />
+              <MenuItem primaryText={this.props.emailprim} />
+              <MenuItem primaryText={this.props.emailsec} />
+              <MenuItem primaryText={this.props.emailter} />
             </Menu>
         </Popover>
       </div>
