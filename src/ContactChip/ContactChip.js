@@ -119,6 +119,7 @@ class ContactChip extends Component {
     onMouseUp: () => {},
     onTouchEnd: () => {},
     onTouchStart: () => {},
+    onTouchTap: () => {},
   };
 
   static contextTypes = {muiTheme: PropTypes.object.isRequired};
@@ -227,10 +228,20 @@ class ContactChip extends Component {
     event.stopPropagation();
     if (this.props.onTouchTap) {
       this.setState({clicked: true, 
-                     open: true,
-                     anchorEl: event.currentTarget,});
+                     //open: true,
+                     /*anchorEl: event.currentTarget,*/});
     }
     this.props.onTouchStart(event);
+  };
+
+  handleTouchTap = (event) => {
+    // This prevents ghost click.
+    event.preventDefault();
+
+    this.setState({
+      open: true,
+      anchorEl: event.currentTarget,
+    });
   };
 
   render() {
@@ -244,6 +255,7 @@ class ContactChip extends Component {
       onMouseUp: this.handleMouseUp,
       onTouchEnd: this.handleTouchEnd,
       onTouchStart: this.handleTouchStart,
+      onTouchTap: this.handleTouchTap,
       onKeyboardFocus: this.handleKeyboardFocus,
     };
 
