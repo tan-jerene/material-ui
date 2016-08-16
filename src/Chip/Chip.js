@@ -232,6 +232,8 @@ class Chip extends Component {
     const {prepareStyles} = this.context.muiTheme;
     const styles = getStyles(this.props, this.context, this.state);
 
+    console.log(styles);
+
     let {children, style, className, labelStyle, ...other} = this.props;
     const deletable = this.props.onRequestDelete;
     let avatar = null;
